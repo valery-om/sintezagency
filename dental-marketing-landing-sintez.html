@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINTEZ — Маркетинг для стоматологий | Увеличение потока пациентов и рост клиники</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Системный маркетинг для стоматологий: увеличиваем поток пациентов, строим цифровые экосистемы, внедряем CRM и автоматизацию. Кейс: +235% роста за 6 лет. Работаем как партнёры.">
+    <meta name="keywords" content="маркетинг для стоматологии, продвижение стоматологической клиники, увеличить поток пациентов, CRM для стоматологии, автоматизация стоматологии, рост клиники, системный маркетинг">
+    <meta name="author" content="SINTEZ Agency">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sintez.agency/">
+    <meta property="og:title" content="SINTEZ — Маркетинг для стоматологий, который приносит кратный рост">
+    <meta property="og:description" content="Строим цифровые экосистемы для стоматологий. Кейс: +235% роста оборота за 6 лет. Работаем как партнёры, одна клиника на город.">
+    <meta property="og:image" content="https://sintez.agency/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sintez.agency/">
+    <meta property="twitter:title" content="SINTEZ — Маркетинг для стоматологий">
+    <meta property="twitter:description" content="Системный маркетинг для стоматологий: CRM, автоматизация, репутация. Кейс: +235% роста за 6 лет.">
+    <meta property="twitter:image" content="https://sintez.agency/og-image.jpg">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --orange: #FEB631;
+            --red: #B71004;
+            --gray: #DDDDDD;
+            --dark: #1a1a1a;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: var(--white);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+            background: var(--white);
+        }
+
+        .header-contacts {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .header-contacts a:not(.cta-button) {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .header-contacts a:not(.cta-button):hover {
+            color: var(--red);
+        }
+
+        .header-telegram {
+            color: var(--red) !important;
+            font-weight: 600;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--orange);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+
+        .highlight {
+            color: var(--orange);
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+            line-height: 1.5;
+            color: rgba(26, 26, 26, 0.7);
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            background: var(--orange);
+            color: var(--dark);
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: var(--red);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(183, 16, 4, 0.3);
+        }
+
+        .cta-button-secondary {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .cta-button-secondary:hover {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-dark {
+            background: #F8F8F8;
+        }
+
+        .section-accent {
+            background: var(--red);
+        }
+
+        h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            text-align: center;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--orange);
+        }
+
+        /* Problems Section */
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .problem-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid rgba(26, 26, 26, 0.08);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(26, 26, 26, 0.04);
+        }
+
+        .problem-card:hover {
+            border-color: var(--orange);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(254, 182, 49, 0.2);
+        }
+
+        .problem-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .problem-card p {
+            color: rgba(26, 26, 26, 0.7);
+            font-size: 16px;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .service-item {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .service-item:nth-child(even) {
+            grid-template-columns: 2fr 1fr;
+        }
+
+        .service-item:nth-child(even) .service-content {
+            order: -1;
+        }
+
+        .service-icon {
+            background: var(--red);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            font-size: 64px;
+        }
+
+        .service-content h3 {
+            margin-bottom: 15px;
+        }
+
+        .service-content p {
+            color: rgba(26, 26, 26, 0.7);
+            margin-bottom: 15px;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .service-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: rgba(26, 26, 26, 0.7);
+        }
+
+        .service-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .service-result {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(254, 182, 49, 0.1);
+            border-left: 4px solid var(--orange);
+            border-radius: 8px;
+        }
+
+        .service-result strong {
+            color: var(--orange);
+        }
+
+        /* Trust Micro-triggers */
+        .trust-trigger {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 14px;
+            color: rgba(26, 26, 26, 0.5);
+            font-style: italic;
+        }
+
+        /* Unique Section */
+        .unique-box {
+            background: var(--red);
+            padding: 60px;
+            border-radius: 24px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .unique-box h3 {
+            font-size: 36px;
+            color: var(--white);
+            margin-bottom: 30px;
+        }
+
+        .unique-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .unique-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .unique-highlight {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--orange);
+            margin: 30px 0;
+        }
+
+        /* Case Study Section */
+        .case-study {
+            background: #FFF9F0;
+            padding: 60px;
+            border-radius: 24px;
+            margin-top: 60px;
+            border: 2px solid rgba(254, 182, 49, 0.2);
+        }
+
+        .case-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .case-header h3 {
+            font-size: 36px;
+            color: var(--red);
+            margin-bottom: 20px;
+        }
+
+        .case-timeline {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .timeline-item {
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 16px;
+            border: 2px solid rgba(26, 26, 26, 0.08);
+        }
+
+        .timeline-label {
+            font-size: 14px;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content {
+            font-size: 18px;
+            color: rgba(26, 26, 26, 0.8);
+        }
+
+        .case-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .action-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 4px solid var(--orange);
+            border: 2px solid rgba(26, 26, 26, 0.08);
+            border-left: 4px solid var(--orange);
+        }
+
+        .action-item h4 {
+            color: var(--red);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .action-item p {
+            color: rgba(26, 26, 26, 0.7);
+        }
+
+        .case-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .result-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--red);
+            border-radius: 16px;
+        }
+
+        .result-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--orange);
+            margin-bottom: 10px;
+        }
+
+        .result-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .case-footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 2px solid rgba(26, 26, 26, 0.08);
+        }
+
+        .case-footer p {
+            font-size: 20px;
+            color: rgba(26, 26, 26, 0.8);
+        }
+
+        /* Investment Section */
+        .investment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .investment-card {
+            padding: 40px;
+            background: var(--white);
+            border-radius: 16px;
+            text-align: center;
+            border: 2px solid rgba(26, 26, 26, 0.08);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(26, 26, 26, 0.04);
+        }
+
+        .investment-card:hover {
+            border-color: var(--orange);
+            box-shadow: 0 8px 24px rgba(254, 182, 49, 0.2);
+        }
+
+        .investment-card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .investment-card p {
+            color: rgba(26, 26, 26, 0.7);
+            line-height: 1.8;
+        }
+
+        .investment-highlight {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--orange);
+            margin-top: 20px;
+        }
+
+        /* Selection Criteria */
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .criteria-box {
+            padding: 50px;
+            border-radius: 24px;
+        }
+
+        .criteria-not {
+            background: var(--white);
+            border: 2px solid rgba(26, 26, 26, 0.08);
+        }
+
+        .criteria-yes {
+            background: var(--red);
+        }
+
+        .criteria-box h3 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+
+        .criteria-yes h3 {
+            color: var(--white);
+        }
+
+        .criteria-list {
+            list-style: none;
+        }
+
+        .criteria-list li {
+            padding: 15px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 18px;
+            color: rgba(26, 26, 26, 0.8);
+        }
+
+        .criteria-yes li {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .criteria-list li:before {
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .criteria-not li:before {
+            content: "✕";
+            color: rgba(26, 26, 26, 0.3);
+        }
+
+        .criteria-yes li:before {
+            content: "✓";
+            color: var(--orange);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .cta-box {
+            background: var(--red);
+            padding: 80px 60px;
+            border-radius: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-box h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .cta-subtitle {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+        }
+
+        .cta-features {
+            list-style: none;
+            margin: 40px 0;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-features li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .cta-features li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .cta-note {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 40px;
+            border-top: 2px solid rgba(26, 26, 26, 0.08);
+            background: #F8F8F8;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 32px;
+            color: var(--red);
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            color: rgba(26, 26, 26, 0.6);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact {
+            text-align: right;
+        }
+
+        .footer-contact a {
+            display: block;
+            color: var(--red);
+            text-decoration: none;
+            font-size: 18px;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact a:hover {
+            color: var(--orange);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 2px solid rgba(26, 26, 26, 0.08);
+        }
+
+        .footer-ps {
+            font-size: 20px;
+            font-weight: 500;
+            color: rgba(26, 26, 26, 0.8);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-ps strong {
+            color: var(--red);
+        }
+
+        /* Smooth Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .problem-card,
+        .service-item,
+        .investment-card,
+        .action-item {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .problem-card.visible,
+        .service-item.visible,
+        .investment-card.visible,
+        .action-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            h1 {
+                font-size: 42px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            header .container > div {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .header-contacts {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .service-item,
+            .service-item:nth-child(even) {
+                grid-template-columns: 1fr;
+            }
+
+            .service-item:nth-child(even) .service-content {
+                order: 0;
+            }
+
+            .case-timeline,
+            .investment-grid,
+            .criteria-grid,
+            .case-actions {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-contact {
+                text-align: center;
+            }
+
+            .unique-box,
+            .cta-box {
+                padding: 40px 30px;
+            }
+
+            .case-study {
+                padding: 40px 25px;
+            }
+
+            .service-item {
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .cta-button {
+                padding: 16px 40px;
+                font-size: 16px;
+            }
+
+            .case-results {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="logo">SINTEZ AGENCY</div>
+                <div class="header-contacts">
+                    <a href="mailto:hello@sintez.agency">hello@sintez.agency</a>
+                    <a href="https://t.me/sintezagency" target="_blank" class="header-telegram">@sintezagency</a>
+                    <a href="#cta" class="cta-button" style="padding: 12px 30px; font-size: 16px;">Записаться на сессию</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Маркетинг для стоматологий,<br>который приносит <span class="highlight">кратный рост</span></h1>
+            <p class="hero-subtitle">Мы строим цифровые экосистемы, которые превращают хорошие клиники в лидеров города. Без контроля с вашей стороны. Без отчётов ради отчётов. Мы работаем как партнёры — ваш рост это наш рост.</p>
+            <a href="#cta" class="cta-button">Обсудить ваш проект</a>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section id="problems">
+        <div class="container">
+            <h2>Почему стоматологии с отличными врачами<br>зарабатывают меньше посредственных конкурентов</h2>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h3>Администраторы сливают половину заявок</h3>
+                    <p>Люди звонят, пишут — но не записываются. Проблема не в трафике, а в том, что происходит после звонка.</p>
+                </div>
+
+                <div class="problem-card">
+                    <h3>Летний провал убивает годовую прибыль</h3>
+                    <p>Июнь-август — врачи простаивают, кресла пустуют. Клиники без стратегии теряют 20-30% годового потенциала.</p>
+                </div>
+
+                <div class="problem-card">
+                    <h3>Нет репутации = нет доверия</h3>
+                    <p>Люди выбирают клинику в интернете ДО первого звонка. Если у вас мало отзывов на 2ГИС — они идут к конкурентам.</p>
+                </div>
+
+                <div class="problem-card">
+                    <h3>Неявки съедают 5-10% прибыли</h3>
+                    <p>Каждое пустое кресло — это потерянные десятки тысяч рублей. Каждый месяц.</p>
+                </div>
+
+                <div class="problem-card">
+                    <h3>Вы работаете вслепую</h3>
+                    <p>Нет понимания: какие услуги приносят деньги, откуда приходят платёжеспособные пациенты, куда утекает бюджет.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="#services" class="cta-button cta-button-secondary">Как мы это решаем</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-dark">
+        <div class="container">
+            <h2>Что мы делаем</h2>
+            <p style="text-align: center; font-size: 20px; color: rgba(26,26,26,0.7); max-width: 800px; margin: 0 auto 60px;">Мы не "ведём соцсети" и не "настраиваем рекламу". Мы строим <strong style="color: var(--red)">цифровые бесшовные экосистемы</strong>, которые работают годами и дают предсказуемый рост.</p>
+
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">🏆</div>
+                    <div class="service-content">
+                        <h3>Репутация: доминирование в интернете</h3>
+                        <p><strong>Работаем с 10+ агрегаторами:</strong></p>
+                        <ul class="service-list">
+                            <li>Мгновенно обрабатываем каждый отзыв</li>
+                            <li>Стимулируем пациентов оставлять отзывы после приёма</li>
+                            <li>Выигрываем награды от агрегаторов</li>
+                            <li>Входим в рейтинги "Лучших клиник города"</li>
+                        </ul>
+                        <div class="service-result">
+                            <strong>Результат:</strong> Пациенты выбирают вас ДО первого звонка. Половина продажи уже сделана.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">⚙️</div>
+                    <div class="service-content">
+                        <h3>CRM + МИС + автоматизация: конверсия в 2 раза выше</h3>
+                        <p><strong>Находим и закрываем узкие горлышки:</strong></p>
+                        <ul class="service-list">
+                            <li>Интегрируем CRM, МИС и все каналы коммуникации</li>
+                            <li>Обучаем администраторов стандартам работы с заявками</li>
+                            <li>Автоматизируем напоминания и подтверждения записей</li>
+                            <li>Настраиваем ежедневную аналитику для руководства</li>
+                        </ul>
+                        <div class="service-result">
+                            <strong>Результат:</strong> Из того же трафика получаете вдвое больше записей. Неявки сокращаются на 25%.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">💻</div>
+                    <div class="service-content">
+                        <h3>Сайт: не просто красивый, а продающий</h3>
+                        <p><strong>Создаём/дорабатываем сайт под конверсию:</strong></p>
+                        <ul class="service-list">
+                            <li>Удобная онлайн-запись интегрирована с CRM и МИС</li>
+                            <li>Оптимизация под мобильные устройства</li>
+                            <li>Быстрая загрузка и соответствие стандартам SEO</li>
+                            <li>Интеграция с агрегаторами и онлайн-записью</li>
+                        </ul>
+                        <div class="service-result">
+                            <strong>Результат:</strong> Сайт становится эффективным инструментом продаж, а не просто визиткой.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">📱</div>
+                    <div class="service-content">
+                        <h3>Контент: экспертность, которая продаёт</h3>
+                        <p><strong>Системный контент 2-3 раза в неделю:</strong></p>
+                        <ul class="service-list">
+                            <li>Кейсы "до/после" с реальными результатами</li>
+                            <li>Экспертные статьи и видео</li>
+                            <li>Закулисье клиники — знакомство с врачами</li>
+                            <li>Распространение через все каналы коммуникации</li>
+                        </ul>
+                        <div class="service-result">
+                            <strong>Результат:</strong> Пациенты видят вас регулярно, доверяют как экспертам, возвращаются и рекомендуют.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">🤝</div>
+                    <div class="service-content">
+                        <h3>Партнёрства: репутация на годы</h3>
+                        <p><strong>Стратегические коллаборации:</strong></p>
+                        <ul class="service-list">
+                            <li>Городские мероприятия и благотворительные акции</li>
+                            <li>Работа с локальными инфлюенсерами</li>
+                            <li>Публикации в СМИ и профильных изданиях</li>
+                        </ul>
+                        <div class="service-result">
+                            <strong>Результат:</strong> Вы становитесь не просто клиникой, а частью жизни города. Накопительный эффект работает годами.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">🤖</div>
+                    <div class="service-content">
+                        <h3>Команда + AI + подрядчики: максимальная эффективность</h3>
+                        <p><strong>Мы не делаем всё сами — мы управляем процессом:</strong></p>
+                        <ul class="service-list">
+                            <li>Контролируем и координируем подрядчиков по всем направлениям</li>
+                            <li>Внедряем AI-инструменты для анализа данных и автоматизации</li>
+                            <li>Используем нейросети для контент-стратегии и аналитики</li>
+                            <li>Обеспечиваем единое управление всеми процессами</li>
+                        </ul>
+                        <div class="service-result">
+                            <strong>Результат:</strong> Вы получаете экспертизу целой команды специалистов по цене одного маркетолога, плюс технологии будущего.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 80px;">
+                <a href="#cta" class="cta-button">Обсудить внедрение системы</a>
+                <p class="trust-trigger">⚡ Обычно отвечаем в течение 1 рабочего дня</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Proposition -->
+    <section id="unique">
+        <div class="container">
+            <h2>Наша фишка</h2>
+            <div class="unique-box">
+                <h3>Одна клиника на город</h3>
+                <div class="unique-content">
+                    <p><strong>Мы не берём конкурентов.</strong></p>
+                    <p>Когда мы работаем с вашей клиникой в городе — мы не возьмём другую стоматологию из этого же города. Никогда.</p>
+                    
+                    <div class="unique-highlight">Почему это важно для вас:</div>
+                    
+                    <p>• Все наши инсайты, наработки, стратегии — работают только на вас<br>
+                    • Мы не размениваемся на десятки проектов<br>
+                    • Ваш успех = наш успех. Мы заинтересованы в вашем росте максимально</p>
+                    
+                    <div class="unique-highlight" style="margin-top: 40px;">Мы работаем как партнёры, а не подрядчики</div>
+                    
+                    <p>Вам не нужно нас контролировать, требовать отчёты, пинать по дедлайнам. Мы сами заинтересованы в результате и делаем всё, чтобы вы росли.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="#cta" class="cta-button">Обсудить сотрудничество</a>
+                <p class="trust-trigger">💬 Напишите нам: <a href="https://t.me/sintezagency" target="_blank" style="color: var(--red); text-decoration: none; font-weight: 600;">@sintezagency</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study -->
+    <section id="case" class="section-dark">
+        <div class="container">
+            <h2>Кейс: стоматология "Престиж"</h2>
+            
+            <div class="case-study">
+                <div class="case-header">
+                    <h3>От хаоса к системе за 6 лет</h3>
+                    <p style="font-size: 18px; color: rgba(255,255,255,0.8);">Новый владелец купил клинику в Магнитогорске и обнаружил полное отсутствие системы</p>
+                </div>
+
+                <div class="case-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-label">Точка А</div>
+                        <div class="timeline-content">Записи в тетрадку<br>Нулевая аналитика<br>Мёртвые соцсети</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-label">Процесс</div>
+                        <div class="timeline-content">Построение<br>цифровой экосистемы<br>за 6 лет</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-label">Сегодня</div>
+                        <div class="timeline-content">Лидер рынка<br>Узнаваемый бренд<br>Системный рост</div>
+                    </div>
+                </div>
+
+                <h4 style="font-size: 24px; color: var(--red); margin: 50px 0 30px; text-align: center;">Что сделали:</h4>
+
+                <div class="case-actions">
+                    <div class="action-item">
+                        <h4>Ребрендинг и позиционирование</h4>
+                        <p>Выстроили позиционирование и провели полный ребрендинг клиники</p>
+                    </div>
+
+                    <div class="action-item">
+                        <h4>Внедрение CRM и МИС</h4>
+                        <p>Обнаружили: 77% лидов сливали администраторы. Построили систему контроля и обучения</p>
+                    </div>
+
+                    <div class="action-item">
+                        <h4>Захват рейтингов</h4>
+                        <p>ТОП-5 города на всех агрегаторах, награды от 2ГИС, ПроДокторов и других платформ</p>
+                    </div>
+
+                    <div class="action-item">
+                        <h4>Стратегические партнёрства</h4>
+                        <p>Конкурс "Мама года" — охват 15 000 человек, десятки публикаций в СМИ</p>
+                    </div>
+
+                    <div class="action-item">
+                        <h4>Автоматизация процессов</h4>
+                        <p>Напоминания, отчёты, сегментация базы — всё работает без участия руководства</p>
+                    </div>
+
+                    <div class="action-item">
+                        <h4>Контент-стратегия</h4>
+                        <p>Системный контент, кейсы, экспертные статьи — постоянная видимость в городе</p>
+                    </div>
+                </div>
+
+                <h4 style="font-size: 28px; color: var(--red); margin: 50px 0 30px; text-align: center;">Результат за 6 лет:</h4>
+
+                <div class="case-results">
+                    <div class="result-card">
+                        <div class="result-number">+235%</div>
+                        <div class="result-label">рост оборота</div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-number">+280%</div>
+                        <div class="result-label">рост записей</div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-number">-26%</div>
+                        <div class="result-label">снижение неявок</div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-number">+74%</div>
+                        <div class="result-label">лояльных пациентов</div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-number">×2</div>
+                        <div class="result-label">конверсия в записи</div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-number">ТОП-3</div>
+                        <div class="result-label">рейтинг в городе</div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-number">1500+</div>
+                        <div class="result-label">положительных отзывов</div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-number">85%</div>
+                        <div class="result-label">клиентов по рекомендациям</div>
+                    </div>
+                </div>
+
+                <div class="case-footer">
+                    <p><strong>Мы работаем с этой клиникой 6 лет.</strong><br>Это не разовый проект — это долгосрочное партнёрство с непрерывным ростом.</p>
+                </div>
+
+                <!-- Client Testimonial -->
+                <div style="margin-top: 50px; padding: 40px; background: var(--white); border-radius: 16px; border: 2px solid rgba(254, 182, 49, 0.3);">
+                    <p style="font-size: 20px; font-style: italic; color: rgba(26,26,26,0.8); line-height: 1.6; margin-bottom: 20px;">
+                        "Раньше мы работали вслепую — не понимали, откуда приходят пациенты и куда уходят деньги. SINTEZ выстроил систему, которая работает сама. Теперь я вижу каждую цифру и могу планировать на годы вперёд."
+                    </p>
+                    <p style="color: var(--red); font-weight: 600;">— Владелец клиники "Престиж", Магнитогорск</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="#cta" class="cta-button">Хочу такой же результат</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment -->
+    <section id="investment">
+        <div class="container">
+            <h2>Инвестиции и возврат</h2>
+            
+            <div class="investment-grid">
+                <div class="investment-card">
+                    <h3>Инвестиции</h3>
+                    <div class="investment-highlight">10% от оборота</div>
+                    <p>Это не расходы. Это вложения в системы, которые дают кратный возврат.</p>
+                </div>
+
+                <div class="investment-card">
+                    <h3>Возврат</h3>
+                    <div class="investment-highlight">Каждый рубль × 10</div>
+                    <p>Мы не обещаем волшебства за месяц. Но через 6-12 месяцев вы выходите на устойчивый системный рост.</p>
+                </div>
+
+                <div class="investment-card">
+                    <h3>Срок</h3>
+                    <div class="investment-highlight">6-12 месяцев</div>
+                    <p>Потому что реальные изменения требуют времени: внедрение систем, обучение команды, набор статистики.</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; font-size: 22px; margin-top: 60px; color: var(--red); font-weight: 600;">Но результат — это не всплеск на месяц, а рост на годы</p>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#cta" class="cta-button">Узнать детали сотрудничества</a>
+                <p class="trust-trigger">📧 Email: <a href="mailto:hello@sintez.agency" style="color: var(--red); text-decoration: none; font-weight: 600;">hello@sintez.agency</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selection Criteria -->
+    <section id="criteria" class="section-dark">
+        <div class="container">
+            <h2>Мы работаем не со всеми</h2>
+            
+            <div class="criteria-grid">
+                <div class="criteria-box criteria-not">
+                    <h3>Мы НЕ для вас, если:</h3>
+                    <ul class="criteria-list">
+                        <li>Нужен результат "ещё вчера"</li>
+                        <li>Ищете самый дешёвый вариант</li>
+                        <li>Не готовы менять процессы внутри клиники</li>
+                        <li>Хотите "просто вести соцсети"</li>
+                    </ul>
+                </div>
+
+                <div class="criteria-box criteria-yes">
+                    <h3>Мы для вас, если:</h3>
+                    <ul class="criteria-list">
+                        <li>Хотите стать №1 в своём городе</li>
+                        <li>Готовы инвестировать в долгосрочную стратегию</li>
+                        <li>Понимаете, что маркетинг — это система, а не разовые акции</li>
+                        <li>Ищете партнёра, а не подрядчика</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="#cta" class="cta-button">Проверить, подходим ли мы друг другу</a>
+                <p class="trust-trigger">✉️ Связаться: <a href="mailto:hello@sintez.agency" style="color: var(--red); text-decoration: none; font-weight: 600;">hello@sintez.agency</a> | <a href="https://t.me/sintezagency" target="_blank" style="color: var(--red); text-decoration: none; font-weight: 600;">@sintezagency</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Следующий шаг:<br>стратегическая сессия</h2>
+                <p class="cta-subtitle">Бесплатно, 60 минут, онлайн</p>
+                <p style="font-size: 18px; margin-bottom: 40px;">Мы разберём вашу ситуацию и покажем, где вы теряете деньги прямо сейчас</p>
+
+                <ul class="cta-features">
+                    <li>Экспресс-аудит: CRM, репутация, конверсии, трафик</li>
+                    <li>Анализ конкурентов в вашем городе</li>
+                    <li>3 конкретных шага, которые дадут рост в ближайшие месяцы</li>
+                    <li>Прогноз результатов при внедрении системы</li>
+                </ul>
+
+                <a href="#contact" class="cta-button">Записаться на сессию</a>
+
+                <p class="trust-trigger" style="margin-top: 20px;">🔒 Конфиденциально | ⚡ Ответ в течение 1 рабочего дня<br>
+                📧 <a href="mailto:hello@sintez.agency" style="color: var(--orange); text-decoration: none;">hello@sintez.agency</a> | 
+                💬 <a href="https://t.me/sintezagency" target="_blank" style="color: var(--orange); text-decoration: none;">@sintezagency</a></p>
+
+                <div class="cta-note">
+                    <strong>Условие:</strong> Сессия только для владельцев и топ-менеджеров,<br>которые принимают решения
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>SINTEZ AGENCY</h3>
+                    <p>Системный маркетинг для стоматологий</p>
+                    <p>Строим цифровые экосистемы с 2018 года</p>
+                </div>
+                <div class="footer-contact">
+                    <a href="mailto:hello@sintez.agency">hello@sintez.agency</a>
+                    <a href="https://t.me/sintezagency" target="_blank">Telegram: @sintezagency</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-ps">
+                    <p><strong>P.S.</strong> Наш клиент начал с тетрадки и хаоса.<br>Сегодня это одна из самых узнаваемых стоматологий города.</p>
+                    <p style="margin-top: 20px;"><strong>Следующими можете быть вы.<br>Или ваши конкуренты — если они найдут нас раньше.</strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer для анимации при скролле
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100); // Задержка для последовательного появления
+                }
+            });
+        }, observerOptions);
+
+        // Наблюдаем за элементами для анимации
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.problem-card, .service-item, .investment-card, .action-item');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+
+        // Плавный скролл к якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
