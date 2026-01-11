@@ -1642,4 +1642,101 @@ footer {
     .footer-brand p {
         margin: 0 auto;
     }
+}/* =========================================
+   Mobile Responsiveness Fixes
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Case Study Fixes */
+    .case-timeline {
+        flex-direction: column;
+        gap: 40px;
+        padding-left: 20px;
+        /* Space for a vertical line if we wanted one, or just alignment */
+    }
+
+    /* Hide the horizontal line causing the glitch */
+    .case-timeline::before {
+        display: none;
+    }
+
+    /* Add a vertical connecting line for mobile (optional, but looks better) */
+    .case-timeline::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        /* Center alignment */
+        width: 2px;
+        background: linear-gradient(180deg, rgba(255, 143, 0, 0.2), var(--orange), rgba(255, 143, 0, 0.2));
+        transform: translateX(-50%);
+        z-index: 0;
+        display: none;
+        /* Let's keep it simple first: just stack them without line */
+    }
+
+    .timeline-item {
+        margin-bottom: 20px;
+    }
+
+    .case-results {
+        grid-template-columns: 1fr;
+        /* Stack results vertically */
+        gap: 20px;
+    }
+
+    .case-actions {
+        grid-template-columns: 1fr;
+        /* Stack actions vertically */
+    }
+
+    /* Investment Block Fixes */
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .model-card {
+        margin-bottom: 20px;
+    }
+
+    .investment-stats {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+        /* Add side padding */
+    }
+
+    .stat-divider {
+        width: 100px;
+        height: 1px;
+    }
+
+    /* CTA Fixes */
+    .cta-box {
+        padding: 40px 20px;
+    }
+
+    .cta-features li {
+        font-size: 16px;
+    }
+
+    /* Footer Fixes */
+    footer {
+        padding-top: 40px;
+    }
+
+    .footer-grid {
+        gap: 40px;
+    }
+
+    .footer-quote {
+        padding: 30px 20px;
+        font-size: 18px;
+    }
+
+    .footer-quote p {
+        font-size: 18px;
+    }
 }
