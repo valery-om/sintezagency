@@ -1,1173 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SINTEZ — Маркетинг для стоматологий | Увеличение потока пациентов и рост клиники</title>
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Системный маркетинг для стоматологий: увеличиваем поток пациентов, строим цифровые экосистемы, внедряем CRM и автоматизацию. Кейс: +235% роста за 6 лет. Работаем как партнёры.">
-    <meta name="keywords" content="маркетинг для стоматологии, продвижение стоматологической клиники, увеличить поток пациентов, CRM для стоматологии, автоматизация стоматологии, рост клиники, системный маркетинг">
+    <meta name="description"
+        content="Системный маркетинг для стоматологий: увеличиваем поток пациентов, строим цифровые экосистемы, внедряем CRM и автоматизацию. Кейс: +235% роста за 6 лет. Работаем как партнёры.">
+    <meta name="keywords"
+        content="маркетинг для стоматологии, продвижение стоматологической клиники, увеличить поток пациентов, CRM для стоматологии, автоматизация стоматологии, рост клиники, системный маркетинг">
     <meta name="author" content="SINTEZ Agency">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sintez.agency/">
     <meta property="og:title" content="SINTEZ — Маркетинг для стоматологий, который приносит кратный рост">
-    <meta property="og:description" content="Строим цифровые экосистемы для стоматологий. Кейс: +235% роста оборота за 6 лет. Работаем как партнёры, одна клиника на город.">
+    <meta property="og:description"
+        content="Строим цифровые экосистемы для стоматологий. Кейс: +235% роста оборота за 6 лет. Работаем как партнёры, одна клиника на город.">
     <meta property="og:image" content="https://sintez.agency/og-image.jpg">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://sintez.agency/">
     <meta property="twitter:title" content="SINTEZ — Маркетинг для стоматологий">
-    <meta property="twitter:description" content="Системный маркетинг для стоматологий: CRM, автоматизация, репутация. Кейс: +235% роста за 6 лет.">
+    <meta property="twitter:description"
+        content="Системный маркетинг для стоматологий: CRM, автоматизация, репутация. Кейс: +235% роста за 6 лет.">
     <meta property="twitter:image" content="https://sintez.agency/og-image.jpg">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        :root {
-            --orange: #FEB631;
-            --red: #B71004;
-            --gray: #DDDDDD;
-            --dark: #1a1a1a;
-            --white: #FFFFFF;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background: var(--white);
-            color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Geometric Background Shapes */
-        .bg-shape {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.05;
-            pointer-events: none;
-        }
-
-        .bg-shape-1 {
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(135deg, var(--orange), var(--red));
-            top: -200px;
-            right: -100px;
-        }
-
-        .bg-shape-2 {
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(225deg, var(--red), var(--orange));
-            bottom: -150px;
-            left: -100px;
-        }
-
-        .bg-shape-3 {
-            width: 250px;
-            height: 250px;
-            background: linear-gradient(45deg, var(--orange), var(--red));
-            top: 50%;
-            right: 10%;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            padding: 40px 0;
-            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
-            background: var(--white);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        header.scrolled {
-            padding: 20px 0;
-            box-shadow: 0 4px 20px rgba(26, 26, 26, 0.08);
-        }
-
-        .header-contacts {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .header-contacts a:not(.cta-button) {
-            color: var(--dark);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .header-contacts a:not(.cta-button):hover {
-            color: var(--red);
-        }
-
-        .header-telegram {
-            color: var(--red) !important;
-            font-weight: 600;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--orange);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(254, 182, 49, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(183, 16, 4, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-        }
-
-        h1 {
-            font-size: 56px;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 30px;
-            color: var(--dark);
-        }
-
-        .highlight {
-            color: var(--orange);
-        }
-
-        .hero-subtitle {
-            font-size: 22px;
-            line-height: 1.5;
-            color: rgba(26, 26, 26, 0.7);
-            max-width: 800px;
-            margin: 0 auto 50px;
-        }
-
-        /* CTA Button */
-        .cta-button {
-            display: inline-block;
-            padding: 20px 50px;
-            background: linear-gradient(135deg, var(--orange) 0%, #FFB020 100%);
-            color: var(--dark);
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 12px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(254, 182, 49, 0.3);
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .cta-button:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .cta-button:hover {
-            background: linear-gradient(135deg, var(--red) 0%, #D01000 100%);
-            color: var(--white);
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 25px rgba(183, 16, 4, 0.4);
-        }
-
-        .cta-button:active {
-            transform: translateY(-1px) scale(0.98);
-        }
-
-        .cta-button-secondary {
-            background: var(--dark);
-            color: var(--white);
-        }
-
-        .cta-button-secondary:hover {
-            background: var(--red);
-            color: var(--white);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 80px 0;
-        }
-
-        .section-dark {
-            background: #F8F8F8;
-        }
-
-        .section-accent {
-            background: var(--red);
-        }
-
-        h2 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 60px;
-            text-align: center;
-            line-height: 1.2;
-            color: var(--dark);
-        }
-
-        h3 {
-            font-size: 28px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--orange);
-        }
-
-        /* Problems Section */
-        .problems-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .problem-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .problem-card::after {
-            content: '';
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(183, 16, 4, 0.08) 0%, transparent 70%);
-            bottom: -40px;
-            right: -40px;
-            transition: all 0.4s ease;
-            pointer-events: none;
-        }
-
-        .problem-card:hover::after {
-            transform: scale(1.3);
-            opacity: 0.5;
-        }
-
-        .problem-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--orange), var(--red));
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .problem-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .problem-card:hover {
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-8px);
-            box-shadow: 0 16px 48px rgba(254, 182, 49, 0.2);
-            background: rgba(255, 255, 255, 0.85);
-        }
-
-        .problem-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .problem-card p {
-            color: rgba(26, 26, 26, 0.7);
-            font-size: 16px;
-        }
-
-        /* Services Section */
-        /* Tabs Navigation */
-        .tabs-nav {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 50px;
-            overflow-x: auto;
-            padding-bottom: 10px;
-        }
-
-        .tab-button {
-            padding: 15px 30px;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--dark);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            position: relative;
-        }
-
-        .tab-button:hover {
-            background: rgba(255, 255, 255, 0.8);
-            border-color: rgba(254, 182, 49, 0.3);
-        }
-
-        .tab-button.active {
-            background: linear-gradient(135deg, var(--orange) 0%, var(--red) 100%);
-            color: var(--white);
-            border-color: transparent;
-            box-shadow: 0 4px 20px rgba(254, 182, 49, 0.4);
-        }
-
-        /* Tab Content */
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .tab-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            padding: 50px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tab-panel::after {
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(254, 182, 49, 0.1) 0%, transparent 70%);
-            top: -100px;
-            right: -100px;
-            pointer-events: none;
-        }
-
-        .tab-panel h3 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .tab-panel p {
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 25px;
-            color: rgba(26, 26, 26, 0.8);
-            position: relative;
-            z-index: 1;
-        }
-
-        .tab-panel .service-list {
-            position: relative;
-            z-index: 1;
-        }
-
-        .tab-panel .service-result {
-            position: relative;
-            z-index: 1;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .service-item {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            padding: 50px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
-        }
-
-        /* Geometric background patterns */
-        .service-item::after {
-            content: '';
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(254, 182, 49, 0.15) 0%, transparent 70%);
-            top: -80px;
-            right: -80px;
-            transition: all 0.5s ease;
-            pointer-events: none;
-        }
-
-        .service-item:nth-child(even)::after {
-            background: radial-gradient(circle, rgba(183, 16, 4, 0.12) 0%, transparent 70%);
-            top: auto;
-            bottom: -80px;
-            right: auto;
-            left: -80px;
-        }
-
-        .service-item:nth-child(3)::after,
-        .service-item:nth-child(5)::after {
-            width: 150px;
-            height: 150px;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            background: linear-gradient(135deg, rgba(254, 182, 49, 0.1) 0%, rgba(183, 16, 4, 0.08) 100%);
-        }
-
-        .service-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--orange) 0%, var(--red) 100%);
-            transform: scaleY(0);
-            transform-origin: bottom;
-            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            z-index: 1;
-        }
-
-        .service-item:hover::before {
-            transform: scaleY(1);
-            transform-origin: top;
-        }
-
-        .service-item:hover::after {
-            transform: scale(1.3);
-            opacity: 0.7;
-        }
-
-        .service-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 48px rgba(31, 38, 135, 0.15);
-            border-color: rgba(255, 255, 255, 0.5);
-            background: rgba(255, 255, 255, 0.85);
-        }
-
-        .service-item:nth-child(odd) {
-            /* Empty */
-        }
-
-        .service-item:nth-child(even) .service-content {
-            order: unset;
-        }
-
-        .service-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .service-content h3 {
-            margin-bottom: 15px;
-            transition: color 0.3s ease;
-        }
-
-        .service-item:hover .service-content h3 {
-            color: var(--red);
-        }
-
-        .service-content p {
-            color: rgba(26, 26, 26, 0.7);
-            margin-bottom: 15px;
-        }
-
-        .service-list {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        .service-list li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
-            color: rgba(26, 26, 26, 0.7);
-        }
-
-        .service-list li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--orange);
-            font-weight: bold;
-        }
-
-        .service-result {
-            margin-top: 20px;
-            padding: 20px;
-            background: rgba(254, 182, 49, 0.1);
-            border-left: 4px solid var(--orange);
-            border-radius: 8px;
-        }
-
-        .service-result strong {
-            color: var(--orange);
-        }
-
-        /* Trust Micro-triggers */
-        .trust-trigger {
-            display: inline-block;
-            margin-top: 15px;
-            font-size: 14px;
-            color: rgba(26, 26, 26, 0.5);
-            font-style: italic;
-        }
-
-        /* Unique Section */
-        .unique-box {
-            background: var(--red);
-            padding: 60px;
-            border-radius: 24px;
-            text-align: center;
-            margin-top: 60px;
-        }
-
-        .unique-box h3 {
-            font-size: 36px;
-            color: var(--white);
-            margin-bottom: 30px;
-        }
-
-        .unique-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .unique-content p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        .unique-highlight {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--orange);
-            margin: 30px 0;
-        }
-
-        /* Case Study Section */
-        .case-study {
-            background: #FFF9F0;
-            padding: 60px;
-            border-radius: 24px;
-            margin-top: 60px;
-            border: 2px solid rgba(254, 182, 49, 0.2);
-        }
-
-        .case-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .case-header h3 {
-            font-size: 36px;
-            color: var(--red);
-            margin-bottom: 20px;
-        }
-
-        .case-timeline {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin: 50px 0;
-        }
-
-        .timeline-item {
-            text-align: center;
-            padding: 30px;
-            background: var(--white);
-            border-radius: 16px;
-            border: 2px solid rgba(26, 26, 26, 0.08);
-        }
-
-        .timeline-label {
-            font-size: 14px;
-            color: var(--red);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-
-        .timeline-content {
-            font-size: 18px;
-            color: rgba(26, 26, 26, 0.8);
-        }
-
-        .case-actions {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin: 50px 0;
-        }
-
-        .action-item {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 16px;
-            border-left: 4px solid var(--orange);
-            border: 2px solid rgba(26, 26, 26, 0.08);
-            border-left: 4px solid var(--orange);
-        }
-
-        .action-item h4 {
-            color: var(--red);
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        .action-item p {
-            color: rgba(26, 26, 26, 0.7);
-        }
-
-        .case-results {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .result-card {
-            text-align: center;
-            padding: 30px;
-            background: linear-gradient(135deg, var(--red) 0%, #A00D00 100%);
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(183, 16, 4, 0.3);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .result-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(254, 182, 49, 0.3), transparent);
-            transform: rotate(45deg);
-            transition: all 0.6s ease;
-        }
-
-        .result-card:hover::before {
-            left: 100%;
-        }
-
-        .result-card:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 12px 35px rgba(183, 16, 4, 0.4);
-        }
-
-        .result-number {
-            font-size: 42px;
-            font-weight: 700;
-            color: var(--orange);
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .result-label {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .case-footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 40px;
-            border-top: 2px solid rgba(26, 26, 26, 0.08);
-        }
-
-        .case-footer p {
-            font-size: 20px;
-            color: rgba(26, 26, 26, 0.8);
-        }
-
-        /* Investment Section */
-        .investment-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .investment-card {
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .investment-card::after {
-            content: '';
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(254, 182, 49, 0.1) 0%, transparent 70%);
-            top: -50px;
-            right: -50px;
-            transition: all 0.4s ease;
-            pointer-events: none;
-        }
-
-        .investment-card:hover::after {
-            transform: scale(1.2);
-        }
-
-        .investment-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(254, 182, 49, 0.1), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .investment-card:hover::before {
-            left: 100%;
-        }
-
-        .investment-card:hover {
-            border-color: rgba(255, 255, 255, 0.5);
-            box-shadow: 0 12px 40px rgba(254, 182, 49, 0.2);
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.85);
-        }
-
-        .investment-card h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .investment-card p {
-            color: rgba(26, 26, 26, 0.7);
-            line-height: 1.8;
-        }
-
-        .investment-highlight {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--orange);
-            margin-top: 20px;
-        }
-
-        /* Selection Criteria */
-        .criteria-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 50px;
-            margin-top: 60px;
-        }
-
-        .criteria-box {
-            padding: 50px;
-            border-radius: 24px;
-        }
-
-        .criteria-not {
-            background: var(--white);
-            border: 2px solid rgba(26, 26, 26, 0.08);
-        }
-
-        .criteria-yes {
-            background: var(--red);
-        }
-
-        .criteria-box h3 {
-            font-size: 32px;
-            margin-bottom: 30px;
-            color: var(--dark);
-        }
-
-        .criteria-yes h3 {
-            color: var(--white);
-        }
-
-        .criteria-list {
-            list-style: none;
-        }
-
-        .criteria-list li {
-            padding: 15px 0;
-            padding-left: 35px;
-            position: relative;
-            font-size: 18px;
-            color: rgba(26, 26, 26, 0.8);
-        }
-
-        .criteria-yes li {
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        .criteria-list li:before {
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .criteria-not li:before {
-            content: "✕";
-            color: rgba(26, 26, 26, 0.3);
-        }
-
-        .criteria-yes li:before {
-            content: "✓";
-            color: var(--orange);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        .cta-box {
-            background: var(--red);
-            padding: 80px 60px;
-            border-radius: 24px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .cta-box h2 {
-            color: var(--white);
-            margin-bottom: 20px;
-        }
-
-        .cta-subtitle {
-            font-size: 20px;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 40px;
-        }
-
-        .cta-features {
-            list-style: none;
-            margin: 40px 0;
-            text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-features li {
-            padding: 15px 0;
-            padding-left: 40px;
-            position: relative;
-            font-size: 18px;
-            color: rgba(255, 255, 255, 0.95);
-        }
-
-        .cta-features li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--orange);
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .cta-note {
-            margin-top: 40px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.85);
-        }
-
-        /* Footer */
-        footer {
-            padding: 60px 0 40px;
-            border-top: 2px solid rgba(26, 26, 26, 0.08);
-            background: #F8F8F8;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 60px;
-            margin-bottom: 40px;
-        }
-
-        .footer-brand h3 {
-            font-size: 32px;
-            color: var(--red);
-            margin-bottom: 20px;
-        }
-
-        .footer-brand p {
-            color: rgba(26, 26, 26, 0.6);
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .footer-contact {
-            text-align: right;
-        }
-
-        .footer-contact a {
-            display: block;
-            color: var(--red);
-            text-decoration: none;
-            font-size: 18px;
-            margin-bottom: 10px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-contact a:hover {
-            color: var(--orange);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 2px solid rgba(26, 26, 26, 0.08);
-        }
-
-        .footer-ps {
-            font-size: 20px;
-            font-weight: 500;
-            color: rgba(26, 26, 26, 0.8);
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .footer-ps strong {
-            color: var(--red);
-        }
-
-        /* Smooth Scroll Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .problem-card,
-        .service-item,
-        .investment-card,
-        .action-item {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .problem-card.visible,
-        .service-item.visible,
-        .investment-card.visible,
-        .action-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            h1 {
-                font-size: 42px;
-            }
-
-            h2 {
-                font-size: 32px;
-            }
-
-            .hero {
-                padding: 60px 0;
-            }
-
-            header .container > div {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-
-            .header-contacts {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .tabs-nav {
-                flex-wrap: wrap;
-            }
-
-            .tab-button {
-                flex: 1 1 auto;
-                min-width: 120px;
-            }
-
-            .tab-panel {
-                padding: 30px;
-            }
-
-            .tab-panel h3 {
-                font-size: 24px;
-            }
-
-            .service-item,
-            .service-item:nth-child(even) {
-                grid-template-columns: 1fr;
-            }
-
-            .service-item:nth-child(even) .service-content {
-                order: 0;
-            }
-
-            .case-timeline,
-            .investment-grid,
-            .criteria-grid,
-            .case-actions {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .footer-contact {
-                text-align: center;
-            }
-
-            .unique-box,
-            .cta-box {
-                padding: 40px 30px;
-            }
-
-            .case-study {
-                padding: 40px 25px;
-            }
-
-            .service-item {
-                gap: 25px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            h1 {
-                font-size: 32px;
-            }
-
-            .hero-subtitle {
-                font-size: 18px;
-            }
-
-            .cta-button {
-                padding: 16px 40px;
-                font-size: 16px;
-            }
-
-            .case-results {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon (placeholder) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <div class="logo">SINTEZ AGENCY</div>
+                <div style="display: flex; align-items: center;">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
+                        🌙
+                    </button>
+                    <div class="logo">SINTEZ AGENCY</div>
+                </div>
                 <div class="header-contacts">
                     <a href="https://t.me/sintez_agency" target="_blank" class="header-telegram">@sintez_agency</a>
-                    <a href="https://t.me/sintez_agency" target="_blank" class="cta-button" style="padding: 12px 30px; font-size: 16px;">Записаться на сессию</a>
+                    <a href="https://t.me/sintez_agency" target="_blank" class="cta-button"
+                        style="padding: 12px 30px; font-size: 16px;">Записаться на сессию</a>
                 </div>
             </div>
         </div>
@@ -1176,9 +59,12 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-3"></div>
         <div class="container">
             <h1>Маркетинг для стоматологий,<br>который приносит <span class="highlight">кратный рост</span></h1>
-            <p class="hero-subtitle">Мы строим цифровые экосистемы, которые превращают хорошие клиники в лидеров города. Без контроля с вашей стороны. Без отчётов ради отчётов. Мы работаем как партнёры — ваш рост это наш рост.</p>
+            <p class="hero-subtitle">Мы строим цифровые экосистемы, которые превращают хорошие клиники в лидеров города.
+                Без контроля с вашей стороны. Без отчётов ради отчётов. Мы работаем как партнёры — ваш рост это наш
+                рост.</p>
             <a href="https://t.me/sintez_agency" target="_blank" class="cta-button">Обсудить ваш проект</a>
         </div>
     </section>
@@ -1187,22 +73,25 @@
     <section id="problems">
         <div class="bg-shape bg-shape-2"></div>
         <div class="container">
-            <h2>Почему стоматологии с отличными врачами<br>зарабатывают меньше посредственных конкурентов</h2>
-            
+            <h2>Почему стоматологии с отличными врачами<br>зарабатывают меньше посредственных конкурентов?</h2>
+
             <div class="problems-grid">
                 <div class="problem-card">
                     <h3>Администраторы сливают половину заявок</h3>
-                    <p>Люди звонят, пишут — но не записываются. Проблема не в трафике, а в том, что происходит после звонка.</p>
+                    <p>Люди звонят, пишут — но не записываются. Проблема не в трафике, а в том, что происходит после
+                        звонка.</p>
                 </div>
 
                 <div class="problem-card">
                     <h3>Летний провал убивает годовую прибыль</h3>
-                    <p>Июнь-август — врачи простаивают, кресла пустуют. Клиники без стратегии теряют 20-30% годового потенциала.</p>
+                    <p>Июнь-август — врачи простаивают, кресла пустуют. Клиники без стратегии теряют 20-30% годового
+                        потенциала.</p>
                 </div>
 
                 <div class="problem-card">
                     <h3>Нет репутации = нет доверия</h3>
-                    <p>Люди выбирают клинику в интернете ДО первого звонка. Если у вас мало отзывов на 2ГИС — они идут к конкурентам.</p>
+                    <p>Люди выбирают клинику в интернете ДО первого звонка. Если у вас мало отзывов на 2ГИС — они идут к
+                        конкурентам.</p>
                 </div>
 
                 <div class="problem-card">
@@ -1212,12 +101,20 @@
 
                 <div class="problem-card">
                     <h3>Вы работаете вслепую</h3>
-                    <p>Нет понимания: какие услуги приносят деньги, откуда приходят платёжеспособные пациенты, куда утекает бюджет.</p>
+                    <p>Нет понимания: какие услуги приносят деньги, откуда приходят платёжеспособные пациенты, куда
+                        утекает бюджет.</p>
+                </div>
+
+                <div class="problem-card">
+                    <h3>Пациенты "одноразки"</h3>
+                    <p>Приходят лечить один зуб и исчезают. Вы тратите бюджет на привлечение, но упускаете прибыль от
+                        комплексных планов.</p>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 60px;">
-                <a href="https://t.me/sintez_agency" target="_blank" class="cta-button cta-button-secondary">Как мы это решаем</a>
+                <a href="https://t.me/sintez_agency" target="_blank" class="cta-button cta-button-secondary">Как мы это
+                    решаем</a>
             </div>
         </div>
     </section>
@@ -1226,149 +123,242 @@
     <section id="services" class="section-dark">
         <div class="container">
             <h2>Что мы делаем</h2>
-            <p style="text-align: center; font-size: 20px; color: rgba(26,26,26,0.7); max-width: 800px; margin: 0 auto 60px;">Мы не "ведём соцсети" и не "настраиваем рекламу". Мы строим <strong style="color: var(--red)">цифровые бесшовные экосистемы</strong>, которые работают годами и дают предсказуемый рост.</p>
+            <p
+                style="text-align: center; font-size: 20px; color: var(--text-muted); max-width: 800px; margin: 0 auto 60px;">
+                Мы не "ведём соцсети" и не "настраиваем рекламу". Мы строим <strong
+                    style="color: var(--orange)">цифровые бесшовные экосистемы</strong>, которые работают годами и дают
+                предсказуемый рост.
+            </p>
 
-            <!-- Tabs Navigation -->
-            <div class="tabs-nav">
-                <button class="tab-button active" data-tab="reputation">Репутация</button>
-                <button class="tab-button" data-tab="automation">Автоматизация</button>
-                <button class="tab-button" data-tab="website">Сайт</button>
-                <button class="tab-button" data-tab="social">Соцсети</button>
-                <button class="tab-button" data-tab="partnerships">Партнёрства</button>
-                <button class="tab-button" data-tab="team">Команда</button>
-            </div>
+            <!-- New Hybrid Services Layout -->
+            <div class="services-wrapper">
 
-            <!-- Tab 1: Reputation -->
-            <div class="tab-content active" id="reputation">
-                <div class="tab-panel">
-                    <h3>Репутационный маркетинг: вы — первый выбор пациента</h3>
-                    <p>Когда человек ищет стоматолога, он начинает с изучения отзывов. <strong>Мы делаем так, чтобы ваша клиника доминировала во всех агрегаторах</strong> — от ПроДокторов до Google Maps.</p>
-                    
-                    <p><strong>Комплексная работа:</strong></p>
-                    <ul class="service-list">
-                        <li><strong>10+ агрегаторов под контролем:</strong> ПроДокторы, НаПоправку, Zoon, 2ГИС, Google, Яндекс</li>
-                        <li><strong>Мгновенная обработка отзывов:</strong> реагируем на любой отзыв в течение 2 часов</li>
-                        <li><strong>Система стимулирования:</strong> каждый довольный пациент оставляет отзыв</li>
-                        <li><strong>Конкурсы и рейтинги:</strong> попадаем в топ-листы "Лучших клиник города"</li>
-                        <li><strong>Работа с негативом:</strong> превращаем недовольных пациентов в лояльных</li>
-                    </ul>
-                    
-                    <div class="service-result">
-                        <strong>Результат:</strong> 4.8+ рейтинг на всех площадках. Пациенты принимают решение ДО первого звонка — половина продажи уже сделана. Стоимость привлечения падает на 40%.
+                <!-- Service 1: Reputation -->
+                <article class="service-card active" data-id="reputation">
+                    <div class="service-header">
+                        <span class="service-icon">⭐</span>
+                        <div class="service-title">
+                            <h3>Репутация</h3>
+                            <p>Вы как "первый выбор" пациента</p>
+                        </div>
+                        <span class="service-arrow">→</span>
                     </div>
-                </div>
-            </div>
+                    <div class="service-body">
+                        <div class="service-content-inner">
+                            <h3>Репутационный маркетинг</h3>
+                            <p>Когда человек ищет стоматолога, он начинает с изучения отзывов. <strong>Мы делаем так,
+                                    чтобы ваша клиника доминировала во всех агрегаторах</strong> — от ПроДокторов до
+                                Google Maps.</p>
 
-            <!-- Tab 2: Automation -->
-            <div class="tab-content" id="automation">
-                <div class="tab-panel">
-                    <h3>CRM + МИС + автоматизация: конверсия × 2</h3>
-                    <p>У вас уже есть поток звонков, но <strong>до половины заявок теряются</strong> из-за хаоса в администратуре. Мы находим и закрываем каждую утечку.</p>
-                    
-                    <p><strong>Бесшовная интеграция:</strong></p>
-                    <ul class="service-list">
-                        <li><strong>Единая система:</strong> CRM, МИС, телефония, мессенджеры, онлайн-запись — всё в одном окне</li>
-                        <li><strong>Обучение команды:</strong> разрабатываем скрипты и стандарты работы с заявками</li>
-                        <li><strong>Умные напоминания:</strong> автоматические SMS/Push за 24 и 2 часа до приёма</li>
-                        <li><strong>Ежедневная аналитика:</strong> руководство видит все цифры в реальном времени</li>
-                        <li><strong>AI-ассистент:</strong> подсказки администратору, что сказать пациенту</li>
-                    </ul>
-                    
-                    <div class="service-result">
-                        <strong>Результат:</strong> Конверсия из заявки в запись вырастает в 2 раза. Неявки падают на 25%. Вы перестаёте терять деньги на "мёртвых душах".
+                            <p><strong>Комплексная работа:</strong></p>
+                            <ul class="service-list">
+                                <li><strong>10+ агрегаторов под контролем:</strong> ПроДокторов, НаПоправку, Zoon, 2ГИС,
+                                    Google, Яндекс</li>
+                                <li><strong>Мгновенная обработка отзывов:</strong> реагируем на любой отзыв в течение 2
+                                    часов</li>
+                                <li><strong>Система стимулирования:</strong> каждый довольный пациент оставляет отзыв
+                                </li>
+                                <li><strong>Конкурсы и рейтинги:</strong> попадаем в топ-листы "Лучших клиник города"
+                                </li>
+                                <li><strong>Работа с негативом:</strong> превращаем недовольных пациентов в лояльных
+                                </li>
+                            </ul>
+
+                            <div class="service-result">
+                                <strong>Результат:</strong> 4.8+ рейтинг на всех площадках. Пациенты принимают решение
+                                ДО первого звонка — половина продажи уже сделана. Стоимость привлечения падает на 40%.
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </article>
 
-            <!-- Tab 3: Website -->
-            <div class="tab-content" id="website">
-                <div class="tab-panel">
-                    <h3>Сайт: не визитка, а главный продавец</h3>
-                    <p>Ваш сайт должен работать 24/7 и продавать даже ночью. <strong>Мы создаём сайты, которые конвертируют посетителей в записи</strong> — без звонков и менеджеров.</p>
-                    
-                    <p><strong>Продающий функционал:</strong></p>
-                    <ul class="service-list">
-                        <li><strong>Онлайн-запись без трения:</strong> 3 клика = запись подтверждена</li>
-                        <li><strong>Мобильная оптимизация:</strong> 70% пациентов заходят с телефона</li>
-                        <li><strong>SEO-архитектура:</strong> выходим в топ Google и Яндекса по ключевым запросам</li>
-                        <li><strong>Интеграция с агрегаторами:</strong> синхронизация расписания в реальном времени</li>
-                        <li><strong>Умные формы:</strong> калькуляторы стоимости, квизы для подбора услуги</li>
-                    </ul>
-                    
-                    <div class="service-result">
-                        <strong>Результат:</strong> Конверсия сайта вырастает с 1% до 5-8%. Сайт генерирует записи без вашего участия. Окупаемость трафика увеличивается в 3-4 раза.
+                <!-- Service 2: Automation -->
+                <article class="service-card" data-id="automation">
+                    <div class="service-header">
+                        <span class="service-icon">⚙️</span>
+                        <div class="service-title">
+                            <h3>Автоматизация</h3>
+                            <p>CRM, МИС и сквозная аналитика</p>
+                        </div>
+                        <span class="service-arrow">→</span>
                     </div>
-                </div>
-            </div>
+                    <div class="service-body">
+                        <div class="service-content-inner">
+                            <h3>CRM + МИС + автоматизация: конверсия × 2</h3>
+                            <p>Внедряем системы, которые не дают администраторам "терять" пациентов. Каждый звонок
+                                учтён, каждое напоминание отправлено автоматически.</p>
 
-            <!-- Tab 4: Social -->
-            <div class="tab-content" id="social">
-                <div class="tab-panel">
-                    <h3>Соцсети и контент: от подписчиков к пациентам</h3>
-                    <p>Большинство клиник постят "котиков" и поздравления с праздниками. <strong>Мы создаём контент, который продаёт и усиливает экспертность</strong> — каждый пост работает на запись.</p>
-                    
-                    <p><strong>Контент-стратегия:</strong></p>
-                    <ul class="service-list">
-                        <li><strong>ВКонтакте + Telegram:</strong> основные площадки для взаимодействия с аудиторией</li>
-                        <li><strong>Экспертный контент:</strong> кейсы "до/после", разбор мифов, советы от врачей</li>
-                        <li><strong>Закулисье клиники:</strong> знакомство с командой, процессами, технологиями</li>
-                        <li><strong>Видео-контент:</strong> Reels, Shorts, Stories — показываем результаты и экспертизу</li>
-                        <li><strong>Комьюнити:</strong> отвечаем на вопросы, ведём диалог, строим доверие</li>
-                        <li><strong>Таргет и продвижение:</strong> точечная реклама на тёплую аудиторию</li>
-                    </ul>
-                    
-                    <div class="service-result">
-                        <strong>Результат:</strong> Постоянный поток "тёплых" пациентов из соцсетей. Рост подписчиков на 30-50% ежемесячно. Каждый 10-й подписчик становится пациентом в течение года.
+                            <div class="services-grid-inner">
+                                <div class="inner-card">
+                                    <h4>Сквозная аналитика</h4>
+                                    <p>Вы будете видеть, сколько денег принес каждый канал рекламы. Никакого "слива
+                                        бюджета".</p>
+                                </div>
+                                <div class="inner-card">
+                                    <h4>Автоматические напоминания</h4>
+                                    <p>WhatsApp-боты напомнят о приёме или поздравят с днём рождения без участия
+                                        человека.</p>
+                                </div>
+                                <div class="inner-card">
+                                    <h4>Контроль качества</h4>
+                                    <p>IP-telephony с автоматической расшифровкой звонков и оценкой работы
+                                        администраторов.</p>
+                                </div>
+                                <div class="inner-card">
+                                    <h4>AI-ассистенты</h4>
+                                    <p>Нейросети обрабатывают заявки в чатах 24/7, записывая пациентов даже ночью.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </article>
 
-            <!-- Tab 5: Partnerships -->
-            <div class="tab-content" id="partnerships">
-                <div class="tab-panel">
-                    <h3>Стратегические партнёрства: новые каналы роста</h3>
-                    <p>Лучшие пациенты приходят не из рекламы, а <strong>по рекомендациям</strong>. Мы выстраиваем систему партнёрств, которая генерирует стабильный поток направлений.</p>
-                    
-                    <p><strong>Система партнёрств:</strong></p>
-                    <ul class="service-list">
-                        <li><strong>Медицинские центры:</strong> становимся профильными партнёрами по стоматологии</li>
-                        <li><strong>Частные врачи:</strong> педиатры, ЛОРы, терапевты — регулярные направления</li>
-                        <li><strong>Корпоративные клиенты:</strong> ДМС-программы для сотрудников компаний</li>
-                        <li><strong>Детские сады и школы:</strong> профилактические осмотры и программы</li>
-                        <li><strong>Реферальная программа:</strong> мотивируем действующих пациентов приводить друзей</li>
-                    </ul>
-                    
-                    <div class="service-result">
-                        <strong>Результат:</strong> 20-30% новых пациентов приходят по направлениям. Средний чек на 40% выше, чем у "холодных". Лояльность и retention на максимуме.
+                <!-- Service 3: Website -->
+                <article class="service-card" data-id="website">
+                    <div class="service-header">
+                        <span class="service-icon">💻</span>
+                        <div class="service-title">
+                            <h3>Сайт</h3>
+                            <p>Продающая площадка, а не визитка</p>
+                        </div>
+                        <span class="service-arrow">→</span>
                     </div>
-                </div>
-            </div>
+                    <div class="service-body">
+                        <div class="service-content-inner">
+                            <h3>Сайт, который конвертирует посетителя в пациента</h3>
+                            <p>Разрабатываем сайты специально для стоматологий с учетом психологии принятия решений
+                                пациентами.</p>
 
-            <!-- Tab 6: Team -->
-            <div class="tab-content" id="team">
-                <div class="tab-panel">
-                    <h3>Команда + AI: вы управляете, мы делаем</h3>
-                    <p>Вам не нужно нанимать маркетолога, дизайнера, таргетолога и SMM. <strong>Мы — готовый маркетинговый отдел</strong>, который работает как продолжение вашей команды.</p>
-                    
-                    <p><strong>Полный цикл:</strong></p>
-                    <ul class="service-list">
-                        <li><strong>Стратег-маркетолог:</strong> планирует рост, контролирует метрики</li>
-                        <li><strong>Контент-команда:</strong> тексты, дизайн, видео — всё производство внутри</li>
-                        <li><strong>AI-ассистенты:</strong> ускоряем создание контента в 3 раза</li>
-                        <li><strong>Техническая поддержка:</strong> сайт, CRM, аналитика — всё под ключ</li>
-                        <li><strong>Подрядчики:</strong> фото/видео съёмки, SEO, реклама — координируем всех</li>
-                        <li><strong>Ежемесячные отчёты:</strong> понятные цифры и план на следующий месяц</li>
-                    </ul>
-                    
-                    <div class="service-result">
-                        <strong>Результат:</strong> Вы экономите 200-300 тыс. руб/мес на зарплатах штатного отдела. Получаете экспертизу уровня enterprise за долю стоимости. Фокусируетесь на медицине — маркетинг работает сам.
+                            <ul class="service-list">
+                                <li><strong>Высокая конверсия:</strong> продуманные пути пользователя и призывы к
+                                    действию</li>
+                                <li><strong>SEO-оптимизация:</strong> выходим в топ выдачи по ключевым запросам</li>
+                                <li><strong>Мобильная версия:</strong> удобно записаться с телефона (80% трафика в
+                                    медицине)</li>
+                                <li><strong>Интеграция с МИС:</strong> онлайн-запись прямо в расписание врачей</li>
+                                <li><strong>Продающий контент::</strong> фото до/после, видео-визитки врачей, живые
+                                    отзывы</li>
+                            </ul>
+
+                            <div class="service-result">
+                                <strong>Результат:</strong> Получаете в 2-3 раза больше заявок при том же рекламном
+                                бюджете за счёт грамотной упаковки и удобства сайта.
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </article>
 
-            <div style="text-align: center; margin-top: 80px;">
-                <a href="https://t.me/sintez_agency" target="_blank" class="cta-button">Обсудить внедрение системы</a>
-                <p class="trust-trigger">⚡ Обычно отвечаем в течение 1 рабочего дня</p>
+                <!-- Service 4: Social -->
+                <article class="service-card" data-id="social">
+                    <div class="service-header">
+                        <span class="service-icon">📱</span>
+                        <div class="service-title">
+                            <h3>Соцсети</h3>
+                            <p>Личный бренд врачей и трафик</p>
+                        </div>
+                        <span class="service-arrow">→</span>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-content-inner">
+                            <h3>Соцсети + Таргет: поток пациентов из VK и Telegram</h3>
+                            <p>Создаём экспертный образ клиники и докторов. Запускаем рекламу, которая окупается с
+                                первого визита.</p>
+
+                            <div class="services-grid-inner">
+                                <div class="inner-card">
+                                    <h4>Экспертный контент</h4>
+                                    <p>Пишем посты и сценарии для Reels, которые продают услуги (имплантацию, виниры)
+                                        через экспертность.</p>
+                                </div>
+                                <div class="inner-card">
+                                    <h4>Таргетированная реклама</h4>
+                                    <p>Находим пациентов с острой болью или потребностью в эстетике по геолокации и
+                                        интересам.</p>
+                                </div>
+                            </div>
+
+                            <div class="service-result">
+                                <strong>Результат:</strong> Стабильный поток заявок на дорогие услуги. Формирование
+                                очереди на приём к ведущим специалистам.
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Service 5: Partnerships -->
+                <article class="service-card" data-id="partnerships">
+                    <div class="service-header">
+                        <span class="service-icon">🤝</span>
+                        <div class="service-title">
+                            <h3>Партнёрства</h3>
+                            <p>Бесплатный канал привлечения</p>
+                        </div>
+                        <span class="service-arrow">→</span>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-content-inner">
+                            <h3>Стратегические партнёрства: пациенты приходят сами</h3>
+                            <p>Выстраиваем сеть реферальных партнеров, которые рекомендуют вашу клинику своим клиентам.
+                            </p>
+
+                            <ul class="service-list">
+                                <li><strong>Врачи смежных специальностей:</strong> ЛОРы, остеопаты, педиатры направляют
+                                    к вам на лечение</li>
+                                <li><strong>Корпоративные клиенты:</strong> договоримся с крупными компаниями города о
+                                    лечении сотрудников</li>
+                                <li><strong>Блогеры и лидеры мнений:</strong> организуем нативную рекламу у местных
+                                    инфлюенсеров</li>
+                                <li><strong>Реферальная программа:</strong> "Приведи друга" — система бонусов для ваших
+                                    пациентов за рекомендации</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Service 6: Team -->
+                <article class="service-card" data-id="team">
+                    <div class="service-header">
+                        <span class="service-icon">👥</span>
+                        <div class="service-title">
+                            <h3>Команда</h3>
+                            <p>Ваш удаленный отдел маркетинга</p>
+                        </div>
+                        <span class="service-arrow">→</span>
+                    </div>
+                    <div class="service-body">
+                        <div class="service-content-inner">
+                            <h3>Штат профессионалов за стоимость одного сотрудника</h3>
+                            <p>Вам не нужно нанимать, обучать и контролировать маркетологов. Мы закрываем все задачи под
+                                ключ.</p>
+
+                            <div class="services-grid-inner">
+                                <div class="inner-card">
+                                    <strong
+                                        style="color: var(--orange); font-size: 18px; display: block; margin-bottom: 5px;">Стратег</strong>
+                                    <p>Разрабатывает план развития и следит за KPI</p>
+                                </div>
+                                <div class="inner-card">
+                                    <strong
+                                        style="color: var(--orange); font-size: 18px; display: block; margin-bottom: 5px;">Контент-мейкер</strong>
+                                    <p>Снимает и монтирует видео, пишет тексты</p>
+                                </div>
+                                <div class="inner-card">
+                                    <strong
+                                        style="color: var(--orange); font-size: 18px; display: block; margin-bottom: 5px;">Тех.
+                                        специалист</strong>
+                                    <p>Настраивает CRM, телефонию и ботов</p>
+                                </div>
+                                <div class="inner-card">
+                                    <strong
+                                        style="color: var(--orange); font-size: 18px; display: block; margin-bottom: 5px;">Личный
+                                        менеджер</strong>
+                                    <p>Всегда на связи в рабочее время</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
@@ -1378,11 +368,12 @@
     <section id="case" class="section-dark">
         <div class="container">
             <h2>Кейс: стоматология "Престиж"</h2>
-            
+
             <div class="case-study">
                 <div class="case-header">
-                    <h3>От хаоса к системе за 6 лет</h3>
-                    <p style="font-size: 18px; color: rgba(255,255,255,0.8);">Новый владелец купил клинику в Магнитогорске и обнаружил полное отсутствие системы</p>
+                    <h3>От сарафанного радио до лидера города за 2 года</h3>
+                    <p style="font-size: 18px; color: var(--text-muted);">Новый владелец купил клинику в Магнитогорске и
+                        обнаружил полное отсутствие системы</p>
                 </div>
 
                 <div class="case-timeline">
@@ -1391,16 +382,18 @@
                         <div class="timeline-content">Записи в тетрадку<br>Нулевая аналитика<br>Мёртвые соцсети</div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-label">Процесс</div>
-                        <div class="timeline-content">Построение<br>цифровой экосистемы<br>за 6 лет</div>
+                        <div class="timeline-label">Через 2 года</div>
+                        <div class="timeline-content">Вышли в лидеры рынка<br>Построили систему<br>Окупили вложения
+                        </div>
                     </div>
                     <div class="timeline-item">
-                        <div class="timeline-label">Сегодня</div>
-                        <div class="timeline-content">Лидер рынка<br>Узнаваемый бренд<br>Системный рост</div>
+                        <div class="timeline-label">Сегодня (6-й год)</div>
+                        <div class="timeline-content">Продолжаем работать<br>Удерживаем ТОП-3<br>Загрузка 99%</div>
                     </div>
                 </div>
 
-                <h4 style="font-size: 24px; color: var(--red); margin: 50px 0 30px; text-align: center;">Что сделали:</h4>
+                <h4 style="font-size: 24px; color: var(--orange); margin: 50px 0 30px; text-align: center;">Что сделали:
+                </h4>
 
                 <div class="case-actions">
                     <div class="action-item">
@@ -1415,7 +408,7 @@
 
                     <div class="action-item">
                         <h4>Захват рейтингов</h4>
-                        <p>ТОП-5 города на всех агрегаторах, награды от 2ГИС, ПроДокторов и других платформ</p>
+                        <p>ТОП-3 города на всех агрегаторах, награды от 2ГИС, ПроДокторов и других платформ</p>
                     </div>
 
                     <div class="action-item">
@@ -1434,7 +427,8 @@
                     </div>
                 </div>
 
-                <h4 style="font-size: 28px; color: var(--red); margin: 50px 0 30px; text-align: center;">Результат за 6 лет:</h4>
+                <h4 style="font-size: 28px; color: var(--orange); margin: 50px 0 30px; text-align: center;">Результаты
+                    сотрудничества:</h4>
 
                 <div class="case-results">
                     <div class="result-card">
@@ -1473,21 +467,27 @@
                     </div>
 
                     <div class="result-card">
-                        <div class="result-number">85%</div>
-                        <div class="result-label">клиентов по рекомендациям</div>
+                        <div class="result-number">99%</div>
+                        <div class="result-label">загрузка кресел</div>
                     </div>
                 </div>
 
-                <div class="case-footer">
-                    <p><strong>Мы работаем с этой клиникой 6 лет.</strong><br>Это не разовый проект — это долгосрочное партнёрство с непрерывным ростом.</p>
+                <div class="case-footer"
+                    style="text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 18px;">
+                    <p><strong>Мы работаем с этой клиникой уже 6 лет.</strong><br>Лидерские позиции были заняты за
+                        первые 2 года, сейчас — стадия удержания и устойчивого роста.</p>
                 </div>
 
                 <!-- Client Testimonial -->
-                <div style="margin-top: 50px; padding: 40px; background: var(--white); border-radius: 16px; border: 2px solid rgba(254, 182, 49, 0.3);">
-                    <p style="font-size: 20px; font-style: italic; color: rgba(26,26,26,0.8); line-height: 1.6; margin-bottom: 20px;">
-                        "Раньше мы работали вслепую — не понимали, откуда приходят пациенты и куда уходят деньги. SINTEZ выстроил систему, которая работает сама. Теперь я вижу каждую цифру и могу планировать на годы вперёд."
+                <div
+                    style="margin-top: 50px; padding: 40px; background: var(--glass-surface); backdrop-filter: blur(20px); border-radius: 16px; border: 1px solid var(--orange-glow);">
+                    <p
+                        style="font-size: 20px; font-style: italic; color: var(--text-main); line-height: 1.6; margin-bottom: 20px;">
+                        "Раньше мы работали вслепую — не понимали, откуда приходят пациенты и куда уходят деньги. SINTEZ
+                        выстроил систему, которая работает сама. Теперь я вижу каждую цифру и могу планировать на годы
+                        вперёд."
                     </p>
-                    <p style="color: var(--red); font-weight: 600;">— Владелец клиники "Престиж", Магнитогорск</p>
+                    <p style="color: var(--orange); font-weight: 600;">— Владелец клиники "Престиж", Магнитогорск</p>
                 </div>
             </div>
 
@@ -1498,35 +498,84 @@
     </section>
 
     <!-- Investment -->
-    <section id="investment">
+    <section id="investment" class="section-dark">
         <div class="container">
-            <h2>Инвестиции и возврат</h2>
-            
-            <div class="investment-grid">
-                <div class="investment-card">
-                    <h3>Инвестиции</h3>
-                    <div class="investment-highlight">10% от оборота</div>
-                    <p>Это не расходы. Это вложения в системы, которые дают кратный возврат.</p>
+            <h2>Почему подписка выгоднее<br>разовых услуг?</h2>
+
+            <div class="comparison-grid">
+                <!-- Old Model -->
+                <div class="model-card model-expense">
+                    <div class="model-header">
+                        <h3>❌ Разовые подрядчики / Фриланс</h3>
+                        <p>Иллюзия экономии</p>
+                    </div>
+                    <ul class="model-list">
+                        <li>
+                            <strong>"Лоскутное одеяло"</strong>
+                            <p>Таргетолог, SEO-шник и технарь не общаются. Хаос вместо системы.</p>
+                        </li>
+                        <li>
+                            <strong>Оплата за процесс</strong>
+                            <p>Вы платите за "настройку", "ведение" и "посты", а не за результат.</p>
+                        </li>
+                        <li>
+                            <strong>Нет стратегии</strong>
+                            <p>Работа от задачи к задаче. Без игры в долгую и накопительного эффекта.</p>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="investment-card">
-                    <h3>Возврат</h3>
-                    <div class="investment-highlight">Каждый рубль × 10</div>
-                    <p>Мы не обещаем волшебства за месяц. Но через 6-12 месяцев вы выходите на устойчивый системный рост.</p>
-                </div>
-
-                <div class="investment-card">
-                    <h3>Срок</h3>
-                    <div class="investment-highlight">6-12 месяцев</div>
-                    <p>Потому что реальные изменения требуют времени: внедрение систем, обучение команды, набор статистики.</p>
+                <!-- New Model -->
+                <div class="model-card model-asset">
+                    <div class="model-header">
+                        <h3>✅ Digital-подписка SINTEZ</h3>
+                        <p>Ваш удаленный отдел маркетинга</p>
+                    </div>
+                    <ul class="model-list">
+                        <li>
+                            <strong>Полноценный отдел</strong>
+                            <p>Все компетенции (Ads, CRM, Контент, Аналитика) в одном окне.</p>
+                        </li>
+                        <li>
+                            <strong>Фокус на выручку</strong>
+                            <p>Нам не интересно просто "слить бюджет". Мы растем вместе с вами.</p>
+                        </li>
+                        <li>
+                            <strong>Игра в долгую</strong>
+                            <p>Непрерывное тестирование гипотез, системный рост и удержание лидерства.</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <p style="text-align: center; font-size: 22px; margin-top: 60px; color: var(--red); font-weight: 600;">Но результат — это не всплеск на месяц, а рост на годы</p>
+            <!-- Investment Metrics -->
+            <div class="investment-stats">
+                <div class="stat-item">
+                    <div class="stat-value">до 8%</div>
+                    <div class="stat-label">от оборота<br>стоимость подписки</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-value">6-12</div>
+                    <div class="stat-label">месяцев<br>на системный результат</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-value">Лидер</div>
+                    <div class="stat-label">результат:<br>доминирование в городе</div>
+                </div>
+            </div>
+
+            <p
+                style="text-align: center; font-size: 22px; margin-top: 50px; color: var(--text-main); font-weight: 500;">
+                Вы нанимаете не подрядчика. Вы нанимаете <span style="color: var(--orange); font-weight: 700;">партнера
+                    по росту</span>.
+            </p>
 
             <div style="text-align: center; margin-top: 40px;">
-                <a href="https://t.me/sintez_agency" target="_blank" class="cta-button">Узнать детали сотрудничества</a>
-                <p class="trust-trigger">💬 Telegram: <a href="https://t.me/sintez_agency" target="_blank" style="color: var(--red); text-decoration: none; font-weight: 600;">@sintez_agency</a></p>
+                <a href="https://t.me/sintez_agency" target="_blank" class="cta-button">Обсудить формат подписки</a>
+                <p class="trust-trigger">💬 Telegram: <a href="https://t.me/sintez_agency" target="_blank"
+                        style="color: var(--orange); text-decoration: none; font-weight: 600;">@sintez_agency</a></p>
             </div>
         </div>
     </section>
@@ -1535,7 +584,7 @@
     <section id="criteria" class="section-dark">
         <div class="container">
             <h2>Мы работаем не со всеми</h2>
-            
+
             <div class="criteria-grid">
                 <div class="criteria-box criteria-not">
                     <h3>Мы НЕ для вас, если:</h3>
@@ -1559,8 +608,10 @@
             </div>
 
             <div style="text-align: center; margin-top: 60px;">
-                <a href="https://t.me/sintez_agency" target="_blank" class="cta-button">Проверить, подходим ли мы друг другу</a>
-                <p class="trust-trigger">💬 Связаться: <a href="https://t.me/sintez_agency" target="_blank" style="color: var(--red); text-decoration: none; font-weight: 600;">@sintez_agency</a></p>
+                <a href="https://t.me/sintez_agency" target="_blank" class="cta-button">Проверить, подходим ли мы друг
+                    другу</a>
+                <p class="trust-trigger">💬 Связаться: <a href="https://t.me/sintez_agency" target="_blank"
+                        style="color: var(--red); text-decoration: none; font-weight: 600;">@sintez_agency</a></p>
             </div>
         </div>
     </section>
@@ -1569,206 +620,78 @@
     <section id="cta" class="cta-section">
         <div class="container">
             <div class="cta-box">
-                <h2>Следующий шаг:<br>стратегическая сессия</h2>
-                <p class="cta-subtitle">Бесплатно, 60 минут, онлайн</p>
-                <p style="font-size: 18px; margin-bottom: 40px;">Мы разберём вашу ситуацию и покажем, где вы теряете деньги прямо сейчас</p>
+                <h2>Стратегическая диагностика<br>системы маркетинга</h2>
+                <p class="cta-subtitle">Закрытый формат. Только для собственников.</p>
+                <p style="font-size: 18px; margin-bottom: 40px; color: var(--text-muted);">Разберем вашу ситуацию и
+                    покажем, где вы теряете деньги прямо сейчас.</p>
 
                 <ul class="cta-features">
-                    <li>Экспресс-аудит: CRM, репутация, конверсии, трафик</li>
-                    <li>Анализ конкурентов в вашем городе</li>
-                    <li>3 конкретных шага, которые дадут рост в ближайшие месяцы</li>
-                    <li>Прогноз результатов при внедрении системы</li>
+                    <li><strong>Рентген бюджета:</strong> найдем утечки в текущей рекламе</li>
+                    <li><strong>Точки роста:</strong> 3 рычага для удвоения выручки</li>
+                    <li><strong>Математика подписки:</strong> расчет выгоды для вашей клиники</li>
                 </ul>
 
-                <a href="https://t.me/sintez_agency" target="_blank" class="cta-button">Записаться на сессию</a>
+                <a href="https://t.me/sintez_agency" target="_blank" class="cta-button">Записаться на диагностику</a>
 
-                <p class="trust-trigger" style="margin-top: 20px;">🔒 Конфиденциально | ⚡ Ответ в течение 1 рабочего дня<br>
-                💬 <a href="https://t.me/sintez_agency" target="_blank" style="color: var(--orange); text-decoration: none; font-weight: 600;">Написать в Telegram</a></p>
+                <p class="trust-trigger" style="margin-top: 20px;">🔒 Конфиденциально | ⚡ Ответ в течение 1 рабочего
+                    дня<br>
+                    💬 <a href="https://t.me/sintez_agency" target="_blank"
+                        style="color: var(--orange); text-decoration: none; font-weight: 600;">Написать в Telegram</a>
+                </p>
 
                 <div class="cta-note">
-                    <strong>Условие:</strong> Сессия только для владельцев и топ-менеджеров,<br>которые принимают решения
+                    <strong>Условие:</strong> Мы берем в работу не более 3 клиник в месяц.<br>Работаем без посредников.
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
+            <!-- Final Quote -->
+            <div class="footer-quote">
+                <p>Наш клиент начал с тетрадки и хаоса.<br>Сегодня это одна из самых узнаваемых стоматологий города.<br>
+                    <br><strong>Следующими можете быть вы.</strong>
+                </p>
+            </div>
+
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-col footer-brand">
                     <h3>SINTEZ AGENCY</h3>
-                    <p>Системный маркетинг для стоматологий</p>
-                    <p>Строим цифровые экосистемы с 2018 года</p>
+                    <p>Системный маркетинг и digital-подписка для амбициозных стоматологий.</p>
+                    <p style="margin-top: 10px;">Строим цифровые экосистемы с 2018 года.</p>
                 </div>
-                <div class="footer-contact">
-                    <a href="https://t.me/sintez_agency" target="_blank">Telegram: @sintez_agency</a>
+
+                <!-- Navigation -->
+                <div class="footer-col footer-nav">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#services">Подход и услуги</a></li>
+                        <li><a href="#case">Результаты (Кейс)</a></li>
+                        <li><a href="#investment">Стоимость подписки</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col footer-contact">
+                    <h4>Связаться</h4>
+                    <a href="https://t.me/sintez_agency" target="_blank" class="footer-contact-link">Telegram:
+                        @sintez_agency</a>
+                    <p style="margin-top: 15px; color: var(--text-muted); font-size: 14px;">Отвечаем в течение дня.</p>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <div class="footer-ps">
-                    <p><strong>P.S.</strong> Наш клиент начал с тетрадки и хаоса.<br>Сегодня это одна из самых узнаваемых стоматологий города.</p>
-                    <p style="margin-top: 20px;"><strong>Следующими можете быть вы.<br>Или ваши конкуренты — если они найдут нас раньше.</strong></p>
-                </div>
+            <!-- Copyright -->
+            <div class="footer-copyright">
+                © 2025 SINTEZ Agency. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <script>
-        // Sticky Header on Scroll
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Parallax Effect for Hero
-        const hero = document.querySelector('.hero');
-        if (hero) {
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-                hero.style.opacity = 1 - (scrolled / 600);
-            });
-        }
-
-        // Number Counter Animation
-        function animateCounter(element, target, suffix = '') {
-            const duration = 2000;
-            const increment = target / (duration / 16);
-            let current = 0;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target + suffix;
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current) + suffix;
-                }
-            }, 16);
-        }
-
-        // Trigger counters when in viewport
-        const observerOptions = {
-            threshold: 0.3,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-                    entry.target.classList.add('counted');
-                    const text = entry.target.textContent;
-                    
-                    // Parse different number formats
-                    if (text.includes('+') && text.includes('%')) {
-                        const num = parseInt(text.replace(/[^0-9]/g, ''));
-                        animateCounter(entry.target, num, '%');
-                        entry.target.textContent = '+0%';
-                    } else if (text.includes('-') && text.includes('%')) {
-                        const num = parseInt(text.replace(/[^0-9]/g, ''));
-                        animateCounter(entry.target, num, '%');
-                        entry.target.textContent = '-0%';
-                    } else if (text.includes('×')) {
-                        entry.target.textContent = '×2';
-                    } else if (text.includes('ТОП')) {
-                        entry.target.textContent = 'ТОП-3';
-                    } else if (text.includes('+')) {
-                        const num = parseInt(text.replace(/[^0-9]/g, ''));
-                        animateCounter(entry.target, num, '+');
-                        entry.target.textContent = '0+';
-                    } else if (text.includes('%') && !text.includes('+') && !text.includes('-')) {
-                        const num = parseInt(text.replace(/[^0-9]/g, ''));
-                        animateCounter(entry.target, num, '%');
-                        entry.target.textContent = '0%';
-                    }
-                }
-            });
-        }, observerOptions);
-
-        // Intersection Observer для анимации при скролле
-        const fadeObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
-                }
-            });
-        }, observerOptions);
-
-        // Наблюдаем за элементами для анимации
-        document.addEventListener('DOMContentLoaded', () => {
-            // Animated elements
-            const animatedElements = document.querySelectorAll('.problem-card, .service-item, .investment-card, .action-item');
-            animatedElements.forEach(el => fadeObserver.observe(el));
-
-            // Counter elements
-            const counterElements = document.querySelectorAll('.result-number');
-            counterElements.forEach(el => counterObserver.observe(el));
-        });
-
-        // Tabs functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const targetTab = button.getAttribute('data-tab');
-
-                    // Remove active class from all buttons and contents
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
-
-                    // Add active class to clicked button and corresponding content
-                    button.classList.add('active');
-                    document.getElementById(targetTab).classList.add('active');
-                });
-            });
-        });
-
-        // Плавный скролл к якорям
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href !== '#cta' && href !== '#contact') return;
-                
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Ripple effect for buttons
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
-                ripple.classList.add('ripple');
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => ripple.remove(), 600);
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
