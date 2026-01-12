@@ -26,23 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // === Language Switcher Logic ===
-    const langToggle = document.getElementById('lang-toggle');
-    const savedLang = localStorage.getItem('language') || 'ru';
 
-    // Set initial state
-    if (savedLang === 'en') {
-        langToggle.checked = true;
-        translatePage('en');
-    } else {
-        langToggle.checked = false;
-    }
-
-    langToggle.addEventListener('change', () => {
-        const newLang = langToggle.checked ? 'en' : 'ru';
-        localStorage.setItem('language', newLang);
-        translatePage(newLang);
-    });
 
     // === Translation System ===
     const translations = {
@@ -461,6 +445,24 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.lang = lang;
     }
 
+    // === Language Switcher Logic (Moved) ===
+    const langToggle = document.getElementById('lang-toggle');
+    const savedLang = localStorage.getItem('language') || 'ru';
+
+    // Set initial state
+    if (savedLang === 'en') {
+        langToggle.checked = true;
+        translatePage('en');
+    } else {
+        langToggle.checked = false;
+    }
+
+    langToggle.addEventListener('change', () => {
+        const newLang = langToggle.checked ? 'en' : 'ru';
+        localStorage.setItem('language', newLang);
+        translatePage(newLang);
+    });
+
 
     // === Sticky Header on Scroll ===
     const header = document.querySelector('header');
@@ -532,8 +534,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     animateCounter(entry.target, num, '%');
                 } else if (text.includes('×')) {
                     entry.target.textContent = '×2'; // Simple text replacement for small numbers
-                } else if (text.includes('×')) {
-                    entry.target.textContent = '×2'; // Simple text replacement for small numbers
+
                 } else if (text.includes('ТОП') || text.includes('TOP')) {
                     // Keep as is, handled by i18n
                     entry.target.innerHTML = text;
