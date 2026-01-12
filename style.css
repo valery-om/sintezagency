@@ -1524,7 +1524,9 @@ footer {
         width: 50px;
         height: 1px;
     }
-}/* =========================================
+}
+
+/* =========================================
    Footer Redesign Styles
    ========================================= */
 
@@ -1642,7 +1644,9 @@ footer {
     .footer-brand p {
         margin: 0 auto;
     }
-}/* =========================================
+}
+
+/* =========================================
    Mobile Responsiveness Fixes
    ========================================= */
 
@@ -1739,7 +1743,9 @@ footer {
     .footer-quote p {
         font-size: 18px;
     }
-}/* =========================================
+}
+
+/* =========================================
    iOS-Style Toggle Switches
    ========================================= */
 
@@ -1894,15 +1900,18 @@ footer {
     .toggle-label {
         font-size: 12px;
     }
-}/* =========================================
+}
+
+/* =========================================
    Mobile Services Sticky Header Fix
    ========================================= */
 
 @media (max-width: 968px) {
     .service-card.active .service-header {
         position: sticky;
-        top: 0;
-        z-index: 100;
+        top: 70px;
+        /* Offset for main header */
+        z-index: 90;
         background: var(--glass-surface);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);

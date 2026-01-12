@@ -595,14 +595,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // If it's mobile accordion
             else {
-                // If clicking an already active card, close it (optional behavior, let's keep it toggle-like)
+                // If clicking an already active card, close it
                 if (card.classList.contains('active')) {
                     card.classList.remove('active');
                 } else {
-                    // Close others (accordion style) or keep open? 
-                    // Let's standard accordion: close others
+                    // Close others
                     serviceCards.forEach(c => c.classList.remove('active'));
                     card.classList.add('active');
+
+                    // Smooth scroll to the top of this card
+                    setTimeout(() => {
+                        header.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }, 300); // Slight delay to allow CSS expansion
                 }
             }
         });
