@@ -1894,4 +1894,28 @@ footer {
     .toggle-label {
         font-size: 12px;
     }
+}/* =========================================
+   Mobile Services Sticky Header Fix
+   ========================================= */
+
+@media (max-width: 968px) {
+    .service-card.active .service-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--glass-surface);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 0;
+    }
+
+    .service-card.active .service-body {
+        padding-top: 20px;
+    }
+
+    /* Ensure smooth scroll behavior */
+    .service-card.active {
+        scroll-margin-top: 80px;
+    }
 }
