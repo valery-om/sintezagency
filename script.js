@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // === Theme Switcher Logic ===
+    // === Theme Switcher Logic (iOS Toggle) ===
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
 
@@ -9,21 +9,120 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
         html.setAttribute('data-theme', 'light');
-        themeToggle.textContent = '☀️';
+        themeToggle.checked = false; // Light theme = unchecked (sun side)
+    } else {
+        themeToggle.checked = true; // Dark theme = checked (moon side)
     }
 
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-theme');
-        if (currentTheme === 'light') {
+    themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+            // Dark theme
             html.removeAttribute('data-theme');
-            themeToggle.textContent = '🌙';
             localStorage.setItem('theme', 'dark');
         } else {
+            // Light theme
             html.setAttribute('data-theme', 'light');
-            themeToggle.textContent = '☀️';
             localStorage.setItem('theme', 'light');
         }
     });
+
+    // === Language Switcher Logic ===
+    const langToggle = document.getElementById('lang-toggle');
+    const savedLang = localStorage.getItem('language') || 'ru';
+
+    // Set initial state
+    if (savedLang === 'en') {
+        langToggle.checked = true;
+        translatePage('en');
+    } else {
+        langToggle.checked = false;
+    }
+
+    langToggle.addEventListener('change', () => {
+        const newLang = langToggle.checked ? 'en' : 'ru';
+        localStorage.setItem('language', newLang);
+        translatePage(newLang);
+    });
+
+    // === Translation System ===
+    const translations = {
+        ru: {
+            brand: "SINTEZ AGENCY",
+            heroTitle: "Системный маркетинг для стоматологий",
+            heroSubtitle: "Превращаем клинику в лидера города через digital-подписку",
+            heroDescription: "Не просто реклама. Полноценный отдел маркетинга: CRM, репутация, контент, аналитика. Одна подписка — вся экосистема роста.",
+            heroCTA: "Получить диагностику",
+            problemsTitle: "С чем приходят к нам?",
+            problem1Title: "Нет потока",
+            problem1Text: "Реклама не окупается, лиды дорогие или их просто нет",
+            problem2Title: "Хаос в CRM",
+            problem2Text: "Пациенты теряются, повторных визитов мало",
+            problem3Title: "Плохая репутация",
+            problem3Text: "Негативные отзывы, низкий рейтинг в поиске",
+            problem4Title: "Нет системы",
+            problem4Text: "Маркетинг от случая к случаю, результат непредсказуем",
+            problem5Title: "Зависимость от агрегаторов",
+            problem5Text: "Платите комиссию, но клиенты не ваши",
+            problem6Title: "Пациенты \"одноразки\"",
+            problem6Text: "Пришли один раз и больше не возвращаются",
+            servicesTitle: "Что мы делаем",
+            caseTitle: "Кейс: Стоматология \"Престиж\"",
+            caseSubtitle: "Магнитогорск, 6 лет сотрудничества",
+            investmentTitle: "Почему подписка выгоднее<br>разовых услуг?",
+            ctaTitle: "Стратегическая диагностика<br>системы маркетинга",
+            ctaSubtitle: "Закрытый формат. Только для собственников.",
+            ctaButton: "Записаться на диагностику",
+            footerQuote: "Наш клиент начал с тетрадки и хаоса.<br>Сегодня это одна из самых узнаваемых стоматологий города.<br><br><strong>Следующими можете быть вы.</strong>",
+            footerNav: "Навигация",
+            footerContact: "Связаться",
+            footerCopyright: "© 2025 SINTEZ Agency. All rights reserved."
+        },
+        en: {
+            brand: "SINTEZ AGENCY",
+            heroTitle: "Systematic Marketing for Dental Clinics",
+            heroSubtitle: "Transform your clinic into a city leader through digital subscription",
+            heroDescription: "Not just advertising. A full marketing department: CRM, reputation, content, analytics. One subscription — complete growth ecosystem.",
+            heroCTA: "Get Diagnostics",
+            problemsTitle: "What brings clients to us?",
+            problem1Title: "No Flow",
+            problem1Text: "Ads don't pay off, leads are expensive or non-existent",
+            problem2Title: "CRM Chaos",
+            problem2Text: "Patients get lost, few repeat visits",
+            problem3Title: "Poor Reputation",
+            problem3Text: "Negative reviews, low search ranking",
+            problem4Title: "No System",
+            problem4Text: "Marketing is sporadic, results unpredictable",
+            problem5Title: "Aggregator Dependency",
+            problem5Text: "You pay commission, but clients aren't yours",
+            problem6Title: "One-Time Patients",
+            problem6Text: "They come once and never return",
+            servicesTitle: "What We Do",
+            caseTitle: "Case Study: \"Prestige\" Dental Clinic",
+            caseSubtitle: "Magnitogorsk, 6 years of partnership",
+            investmentTitle: "Why subscription is better<br>than one-time services?",
+            ctaTitle: "Strategic Marketing<br>System Diagnostics",
+            ctaSubtitle: "Closed format. Owners only.",
+            ctaButton: "Book Diagnostics",
+            footerQuote: "Our client started with a notebook and chaos.<br>Today it's one of the most recognized dental clinics in the city.<br><br><strong>You could be next.</strong>",
+            footerNav: "Navigation",
+            footerContact: "Contact",
+            footerCopyright: "© 2025 SINTEZ Agency. All rights reserved."
+        }
+    };
+
+    function translatePage(lang) {
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+    }
+
 
     // === Sticky Header on Scroll ===
     const header = document.querySelector('header');

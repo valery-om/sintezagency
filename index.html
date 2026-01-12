@@ -41,19 +41,36 @@
     <header>
         <div class="container">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <div style="display: flex; align-items: center;">
-                    <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему">
-                        🌙
-                    </button>
-                    <div class="logo">SINTEZ AGENCY</div>
-                </div>
-                <div class="header-contacts">
-                    <a href="https://t.me/sintez_agency" target="_blank" class="header-telegram">@sintez_agency</a>
-                    <a href="https://t.me/sintez_agency" target="_blank" class="cta-button"
-                        style="padding: 12px 30px; font-size: 16px;">Записаться на сессию</a>
+                <div class="logo" data-i18n="brand">SINTEZ AGENCY</div>
+
+                <div class="header-controls">
+                    <!-- Theme Toggle -->
+                    <div class="toggle-container">
+                        <span class="toggle-icon">☀️</span>
+                        <label class="toggle-switch" aria-label="Toggle theme">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="toggle-icon">🌙</span>
+                    </div>
+
+                    <!-- Language Toggle -->
+                    <div class="toggle-container">
+                        <span class="toggle-label">RU</span>
+                        <label class="toggle-switch" aria-label="Toggle language">
+                            <input type="checkbox" id="lang-toggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="toggle-label">EN</span>
+                    </div>
+
+                    <div class="header-contacts">
+                        <a href="https://t.me/sintez_agency" target="_blank" class="header-telegram">@sintez_agency</a>
+                        <a href="https://t.me/sintez_agency" target="_blank" class="cta-button"
+                            style="padding: 12px 30px; font-size: 16px;">Записаться на сессию</a>
+                    </div>
                 </div>
             </div>
-        </div>
     </header>
 
     <!-- Hero Section -->
@@ -61,11 +78,13 @@
         <div class="bg-shape bg-shape-1"></div>
         <div class="bg-shape bg-shape-3"></div>
         <div class="container">
-            <h1>Маркетинг для стоматологий,<br>который приносит <span class="highlight">кратный рост</span></h1>
-            <p class="hero-subtitle">Мы строим цифровые экосистемы, которые превращают хорошие клиники в лидеров города.
-                Без контроля с вашей стороны. Без отчётов ради отчётов. Мы работаем как партнёры — ваш рост это наш
-                рост.</p>
-            <a href="https://t.me/sintez_agency" target="_blank" class="cta-button">Обсудить ваш проект</a>
+            <h1 data-i18n="heroTitle">Системный маркетинг для стоматологий</h1>
+            <p class="hero-subtitle" data-i18n="heroSubtitle">Превращаем клинику в лидера города через digital-подписку
+            </p>
+            <p class="hero-description" data-i18n="heroDescription">Не просто реклама. Полноценный отдел маркетинга:
+                CRM, репутация, контент, аналитика. Одна подписка — вся экосистема роста.</p>
+            <a href="https://t.me/sintez_agency" target="_blank" class="cta-button" data-i18n="heroCTA">Получить
+                диагностику</a>
         </div>
     </section>
 
@@ -73,7 +92,7 @@
     <section id="problems">
         <div class="bg-shape bg-shape-2"></div>
         <div class="container">
-            <h2>Почему стоматологии с отличными врачами<br>зарабатывают меньше посредственных конкурентов?</h2>
+            <h2 data-i18n="problemsTitle">С чем приходят к нам?</h2>
 
             <div class="problems-grid">
                 <div class="problem-card">
@@ -500,7 +519,7 @@
     <!-- Investment -->
     <section id="investment" class="section-dark">
         <div class="container">
-            <h2>Почему подписка выгоднее<br>разовых услуг?</h2>
+            <h2 data-i18n="investmentTitle">Почему подписка выгоднее<br>разовых услуг?</h2>
 
             <div class="comparison-grid">
                 <!-- Old Model -->
@@ -620,8 +639,8 @@
     <section id="cta" class="cta-section">
         <div class="container">
             <div class="cta-box">
-                <h2>Стратегическая диагностика<br>системы маркетинга</h2>
-                <p class="cta-subtitle">Закрытый формат. Только для собственников.</p>
+                <h2 data-i18n="ctaTitle">Стратегическая диагностика<br>системы маркетинга</h2>
+                <p class="cta-subtitle" data-i18n="ctaSubtitle">Закрытый формат. Только для собственников.</p>
                 <p style="font-size: 18px; margin-bottom: 40px; color: var(--text-muted);">Разберем вашу ситуацию и
                     покажем, где вы теряете деньги прямо сейчас.</p>
 
@@ -631,7 +650,8 @@
                     <li><strong>Математика подписки:</strong> расчет выгоды для вашей клиники</li>
                 </ul>
 
-                <a href="https://t.me/sintez_agency" target="_blank" class="cta-button">Записаться на диагностику</a>
+                <a href="https://t.me/sintez_agency" target="_blank" class="cta-button" data-i18n="ctaButton">Записаться
+                    на диагностику</a>
 
                 <p class="trust-trigger" style="margin-top: 20px;">🔒 Конфиденциально | ⚡ Ответ в течение 1 рабочего
                     дня<br>
@@ -652,7 +672,8 @@
         <div class="container">
             <!-- Final Quote -->
             <div class="footer-quote">
-                <p>Наш клиент начал с тетрадки и хаоса.<br>Сегодня это одна из самых узнаваемых стоматологий города.<br>
+                <p data-i18n="footerQuote">Наш клиент начал с тетрадки и хаоса.<br>Сегодня это одна из самых узнаваемых
+                    стоматологий города.<br>
                     <br><strong>Следующими можете быть вы.</strong>
                 </p>
             </div>
@@ -667,7 +688,7 @@
 
                 <!-- Navigation -->
                 <div class="footer-col footer-nav">
-                    <h4>Навигация</h4>
+                    <h4 data-i18n="footerNav">Навигация</h4>
                     <ul>
                         <li><a href="#services">Подход и услуги</a></li>
                         <li><a href="#case">Результаты (Кейс)</a></li>
@@ -677,7 +698,7 @@
 
                 <!-- Contact -->
                 <div class="footer-col footer-contact">
-                    <h4>Связаться</h4>
+                    <h4 data-i18n="footerContact">Связаться</h4>
                     <a href="https://t.me/sintez_agency" target="_blank" class="footer-contact-link">Telegram:
                         @sintez_agency</a>
                     <p style="margin-top: 15px; color: var(--text-muted); font-size: 14px;">Отвечаем в течение дня.</p>
@@ -686,7 +707,7 @@
 
             <!-- Copyright -->
             <div class="footer-copyright">
-                © 2025 SINTEZ Agency. All rights reserved.
+                <span data-i18n="footerCopyright">© 2025 SINTEZ Agency. All rights reserved.</span>
             </div>
         </div>
     </footer>
