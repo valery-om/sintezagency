@@ -1928,3 +1928,184 @@ footer {
         scroll-margin-top: 80px;
     }
 }
+
+/* =========================================
+   Case Study: $1M Revenue Revamp
+   ========================================= */
+
+.case-million-header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.case-million-title {
+    font-size: 56px;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.case-million-highlight {
+    color: var(--orange);
+    display: block;
+}
+
+.case-badges {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.case-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 143, 0, 0.1);
+    border: 1px solid rgba(255, 143, 0, 0.3);
+    border-radius: 50px;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.case-badge i {
+    color: var(--orange);
+}
+
+/* Growth Chart */
+.growth-chart-container {
+    background: var(--glass-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Glow for Chart */
+.chart-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(255, 143, 0, 0.15), transparent 70%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.growth-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.growth-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.chart-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 300px;
+    /* Max chart height */
+    padding-top: 40px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 12%;
+    position: relative;
+    height: 100%;
+}
+
+.bar-value {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s forwards 0.5s;
+}
+
+/* Updated Gradient: Blue to Orange transition matching reference? 
+   No, user reference has Blue chart. 
+   But site theme is Orange. 
+   Let's stick to Orange theme for consistency, or Blue if user wants exact match?
+   User said "organic add". Site is "sintez" (orange).
+   I will use Orange gradient.
+*/
+.bar-fill {
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 143, 0, 0.3), var(--orange));
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    /* Animation via Transform */
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    /* Height is set inline in HTML */
+}
+
+.bar-fill.visible {
+    transform: scaleY(1);
+}
+
+/* Specific heights via classes if needed, but JS will likely set inline height */
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bar-year {
+    margin-top: 15px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .case-million-title {
+        font-size: 36px;
+    }
+
+    .case-badges {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .growth-chart-container {
+        padding: 20px;
+    }
+
+    .chart-bars {
+        height: 200px;
+        gap: 5px;
+    }
+
+    .bar-value {
+        font-size: 10px;
+    }
+
+    .bar-year {
+        font-size: 11px;
+    }
+}

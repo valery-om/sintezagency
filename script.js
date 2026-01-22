@@ -128,7 +128,14 @@ document.addEventListener('DOMContentLoaded', () => {
             service6Grid4Desc: "Всегда на связи в рабочее время",
 
             // Case Study
+            // Case Study
             caseTitle: "Кейс: стоматология \"Престиж\"",
+            caseMillionTitle: "Мы заработали для клиники<br><span class=\"case-million-highlight\">более $1,000,000</span>",
+            caseMillionBadge1: "<i class=\"fas fa-users\"></i> Командная работа",
+            caseMillionBadge2: "<i class=\"fas fa-chair\"></i> 4 кресла",
+            caseMillionBadge3: "<i class=\"fas fa-city\"></i> Магнитогорск (450 тыс.)",
+            caseMillionDesc: "Это стало возможно исключительно благодаря синергии: сильный продукт клиники + наша цифровая экосистема.",
+            caseChartTitle: "Траектория роста (выручка)",
             caseHeaderTitle: "От сарафанного радио до лидера города за 2 года",
             caseHeaderSubtitle: "Новый владелец купил клинику в Магнитогорске и обнаружил полное отсутствие системы",
             caseTimelineLabel1: "Точка А",
@@ -329,6 +336,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Case Study
             caseTitle: "Case Study: \"Prestige\" Dental Clinic",
+            caseMillionTitle: "We earned for the clinic<br><span class=\"case-million-highlight\">over $1,000,000</span>",
+            caseMillionBadge1: "<i class=\"fas fa-users\"></i> Teamwork",
+            caseMillionBadge2: "<i class=\"fas fa-chair\"></i> 4 chairs",
+            caseMillionBadge3: "<i class=\"fas fa-city\"></i> Magnitogorsk (450k pop)",
+            caseMillionDesc: "This became possible exclusively thanks to synergy: a strong clinic product + our digital ecosystem.",
+            caseChartTitle: "Growth Trajectory (Revenue)",
             caseHeaderTitle: "From Word-of-Mouth to City Leader in 2 Years",
             caseHeaderSubtitle: "New owner bought a clinic in Magnitogorsk and found zero systems",
             caseTimelineLabel1: "Point A",
@@ -572,7 +585,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.problem-card, .service-item, .investment-card, .action-item');
+    const animatedElements = document.querySelectorAll('.problem-card, .service-item, .investment-card, .action-item, .bar-fill');
     animatedElements.forEach(el => fadeObserver.observe(el));
 
 
